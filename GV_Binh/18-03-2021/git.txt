@@ -1,0 +1,58 @@
+gitgit là hệ thống quản lý phân tán dữ liệu và nó là tool cung cấp các dòng lệnh để kết nối 
+từ máy tính cá nhân đến repo
+github, gitlab, bitbucket là nơi lưu trữ code tập trung
+
+2: các khối lệnh của git
+
+    - branch: tạo 1 nhánh mới, xóa hoặc sửa
+    - origin: phiên bản mặc định của nhánh chính và nó đóng vai trò là bí danh của
+    hệ thống để lên lạc với nhánh chính
+    - master/main: tên của nhánh chính trong tất cả các dự án
+    - merge: gộp code của các dev lại với nhánh chính(master)
+    - repository: kho lưu trữ code
+    - tag: cung cấp cho bạn cách theo dõi các commit quan trọng
+    - upstream: nó đang đề cập đến nới mà các bạn dịnh push code và nó mặc định là nhánh chính
+    
+    + git clone <link-repo>: dùng để tải code từ nới lưu trữ về máy tính cá nhân
+    + git commit <-m ''>: thêm lời giải thích cho đoạn code bạn định đẩy lên repo
+    + git add < . > || < file_name >: thêm 1 hoặc nhiều file lên repo
+    + git chekout: chuyển nhánh hoặc tạo nhánh
+    + git push <origin branch_name>: tải code mới nhất lên repo
+    + git pull: dùng để tải code mới nhất từ nhánh nào đó trên repo
+    + git fetch: kiểm tra và lấy những branch mới nhất về máy(đồng bộ)
+    + git stash: lưu lại code hiện vào bản nháp
+    + git stash apply: khôi phục lại code từ bản nháp
+    + git status: khiểm tra mọi trạng thái thay đổi trong code
+    + git init: dùng để khởi tạo 1 repository tại local
+    + git config: dùng để cấu hình trước khi bạn sử dụng git
+    + git remote: kết nối giao tiếp từ local lên nhánh chính và ngược lại
+
+3: Bắt đầu của 1 dự án
+    - Cấu hình git:
+        + B1: git config --global user.name "" //set cái alias
+        + B2: git config --global user.email "tranhoabinh.tha.hua@gmail.com" // set email (là email dùng để login và github)
+
+    - Để tải project từ repo về máy tính cá nhân:
+        + B1: git clone https://github.com/hoabinhvnua2/REACT2012.git
+        + B2: truy cập vào thư mục project
+    - Tạo ra một nhánh mới để làm việc
+        -> chú ý: branch name đưcọ quy ước như sau: feat/van-thanh
+        + git checkout -b branch_name 
+    - Trước khi đẩy code lên nhánh hiện thì cần pull code từ nhánh chính về máy local
+        + git pull origin main
+    - đẩy code từ local lên repo:
+        + git status: để xem sự thay đổi của code
+        + git add . -> để thêm toàn bộ code đã chọn lên repo
+        + git commit -m "nội dung cần chú thích"
+        + git push origin feat/name : đẩy code mới nhất từ local lên nhánh của các bạn
+    - Sau khi đẩy code lên thành công thì các bạn cần vào web github để tạo pull request
+        tạo merge và ass cho anh.
+
+    Buổi sau chúng ta học về HTML: 
+        + Link và image
+        + box model
+        + Css inline
+        + semantic HTML
+        + typography
+        + form
+        + table
