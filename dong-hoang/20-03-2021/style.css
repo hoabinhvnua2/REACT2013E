@@ -10,12 +10,13 @@ body {
     background-color: rgb(2, 114, 211);
     height: 6rem;
     display: flex;
+    width: 100vw;
 }
 .main-nav .main-nav--logo {
     color: #fff;
-    width: 30%;
+    width: 30vw;
     padding-left: 20vw;
-    text-align: center;
+    text-align: left;
     height: 6rem;
     line-height: 6rem;
     margin-top: 0px;
@@ -29,11 +30,11 @@ body {
     text-transform: capitalize;
 }
 .main-nav .main-nav--menu {
-    width: 30%;
+    width: 30vw;
     padding-right: 20vw;
 }
 .main-nav .main-nav--menu .menu-container {
-    max-width: 29vw;
+    width: 29vw;
     padding-left: 1vw;
 }
 .main-nav .main-nav--menu ul {
@@ -45,17 +46,22 @@ body {
 }
 .main-nav .main-nav--menu ul li {
     color: #fff;
-    padding: 0 .5rem;
     display: inline;
     text-transform: uppercase;
     font-size: 1.2rem;
     height: 6rem;
     line-height: 6rem;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 .main-nav .main-nav--menu ul li:hover {
     cursor: pointer;
 }
-.main-nav .main-nav--menu .menu-container .home {
+.main-nav .main-nav--menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.main-nav .main-nav--menu .menu-container .home a {
     text-transform: capitalize;
     color: rgb(255, 180, 62);
 }
@@ -66,17 +72,21 @@ body {
 }
 .section-about {
     margin-top: 2rem;
-    height: 25rem;
+    height: 30rem;
     display: flex;
-    width: 100vw;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 .section-about .section-about--left {
     width: 50%;
 }
 .section-about .section-about--left .section-left--container {
-    float: right;
-    width: 60%;
+    float: left;
+    width: 100%;
     text-align: left;
+}
+.section-about .section-about--left .section-left--container p {
     margin-right: 2rem;
 }
 .section-about .section-about--left .about {
@@ -93,14 +103,11 @@ body {
 .section-about .section-about--right {
     float: left;
     width: 50%;
-    object-fit: contain;
-}
-.section-about .section-about--left .section-left--container {
-    width: 60%;
+    object-fit: cover;
 }
 .section-about .section-about--right img {
-    height: 25rem;
-    width: auto;
+    height: 30rem;
+    width: 100%;
 }
 .section-business {
     width: 100vw;
@@ -205,6 +212,7 @@ body {
     margin-left: .5rem;
 }
 .section-contact {
+    width: 100vw;
     margin-top: 2rem;
 }
 .contact-title {
@@ -276,6 +284,7 @@ body {
     cursor: pointer;
 }
 .footer {
+    width: 100vw;
     margin-top: 2rem;
     background-color: #000;
     color: grey;
