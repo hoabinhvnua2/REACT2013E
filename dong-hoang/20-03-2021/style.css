@@ -8,7 +8,7 @@ body {
 }
 .main-nav {
     background-color: rgb(2, 114, 211);
-    height: 3rem;
+    height: 6rem;
     display: flex;
 }
 .main-nav .main-nav--logo {
@@ -16,8 +16,8 @@ body {
     width: 30%;
     padding-left: 20vw;
     text-align: center;
-    height: 3rem;
-    line-height: 3rem;
+    height: 6rem;
+    line-height: 6rem;
     margin-top: 0px;
     text-transform: uppercase;
     font-size: 1.8rem;
@@ -32,10 +32,14 @@ body {
     width: 30%;
     padding-right: 20vw;
 }
+.main-nav .main-nav--menu .menu-container {
+    max-width: 29vw;
+    padding-left: 1vw;
+}
 .main-nav .main-nav--menu ul {
     display: flex;
     float: left;
-    padding-left: 1rem;
+    justify-content: space-between;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -44,9 +48,12 @@ body {
     padding: 0 .5rem;
     display: inline;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    height: 3rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    height: 6rem;
+    line-height: 6rem;
+}
+.main-nav .main-nav--menu ul li:hover {
+    cursor: pointer;
 }
 .main-nav .main-nav--menu .menu-container .home {
     text-transform: capitalize;
@@ -55,7 +62,7 @@ body {
 .main-cover img {
     width: 100vw;
     object-fit: cover;
-    height: 30rem;
+    height: 35rem;
 }
 .section-about {
     margin-top: 2rem;
@@ -98,16 +105,15 @@ body {
 .section-business {
     width: 100vw;
     margin-top: 5rem;
-    height: 25rem;
+    height: 30rem;
     display: inline-flex;
 }
 .section-business--left {
     width: 50%;
 }
 .section-business--left img {
-    height: 25rem;
+    height: 30rem;
     width: 100%;
-    object-fit: cover;
 }
 .section-business--right {
     background-image: url(Communication.jpg);
@@ -122,29 +128,37 @@ body {
     margin-top: 2rem;
     margin-left: 2rem;
 }
+.business-content:first-child {
+    font-size: 1.2rem;
+}
 .section-business--right .business-content p {
-    margin-top: .5rem;
+    margin-top: 0.25rem;
 }
 .section-business--right .business-content .business-content--bold {
     font-weight: bold;
     font-size: 1.5rem;
-    margin-bottom: .75rem;
+    margin-bottom: 0rem;
 }
 .section-news {
     margin-top: 2rem;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 80vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
     height: fit-content;
 }
 .news-container {
     display: flex;
+    justify-content: space-between;
 }
 .section-news .news-container .news-col {
-    margin-right: 1.5rem;
-    width: 26vw;
+    margin-right: 1rem;
+    float: right;
+    width: 25vw;
     border: solid 1px gainsboro;
     height: fit-content;
+}
+.news-col:last-of-type {
+    margin-right: 0px !important;
 }
 .section-news .news-container .news-col .thumb-img {
     height: 10rem;
@@ -152,17 +166,34 @@ body {
 .section-news .news-container .news-col .thumb-img img {
     height: 10rem;
     object-fit: cover;
-    object-position: center;
     width: 100%;
 }
+.news-text--small {
+    font-size: 1rem;
+}
 .section-news .news-text {
+    color: grey;
+    font-size: 1rem;
     margin-top: .5rem;
 }
+.section-news .news-text i {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.section-news .news-text2 {
+    color: grey;
+}
 .section-news .news-text .news-text--bold {
+    color: #000;
     margin-top: 0px;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+.section-news .news-container {
+    display: flex;
+    justify-content: space-between;
 }
 .section-news .news-container .news-col .news-content .news-title {
     font-weight: bold;
@@ -178,6 +209,7 @@ body {
 }
 .contact-title {
     font-size: 1.5rem;
+    color: grey;
 }
 .contact-text {
     font-weight: bold;
@@ -208,18 +240,24 @@ body {
     margin-bottom: 2rem;
 }
 .section-contact--left .contact-form .user-info input {
+    color: gainsboro;
+    border: solid 1px gainsboro;
     width: 27%;
     height: 2rem;
     line-height: 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    padding-left: .5rem;
 }
 .user-info {
     margin-bottom: 1rem;
 }
 .user-mess textarea {
+    color: gainsboro;
+    border: solid 1px gainsboro;
     width: 99%;
     line-height: 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    padding-left: .5rem;
 }
 .section-contact--button {
     text-align: center;
@@ -231,7 +269,11 @@ body {
     border: none;
     color: #fff;
     border-radius: .5rem;
-    width: 15rem;
+    height: 3rem;
+    width: 12rem;
+}
+.section-contact--button button:hover {
+    cursor: pointer;
 }
 .footer {
     margin-top: 2rem;
@@ -268,7 +310,7 @@ body {
     color: #fff;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -282,14 +324,34 @@ body {
     margin-left: 1.5rem;
 }
 .footer-submit--form {
+    background-color: #000;
     width: 100%;
     margin-top: 1rem;
     display: inline-flex;
     justify-content: space-between;
 }
 .footer-submit--form input {
+    color: gainsboro;
+    font-size: .75rem;
+    background-color: #000;
     width: 100%;
+    border: none;
+    border-bottom: 1px solid gainsboro;
 }
 .footer-submit--form button {
+    font-size: .75rem;
     width: fit-content;
+}
+hr {
+    border: none;
+    height: .5px;
+    background-color: grey;
+    margin-bottom: 0px;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 1rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: #fff;
 }
