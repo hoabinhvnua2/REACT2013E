@@ -13,7 +13,8 @@ body {
 }
 .main-nav .main-nav--logo {
     color: #fff;
-    width: 50%;
+    width: 30%;
+    padding-left: 20vw;
     text-align: center;
     height: 3rem;
     line-height: 3rem;
@@ -27,6 +28,10 @@ body {
 .main-nav .main-nav--logo span {
     text-transform: capitalize;
 }
+.main-nav .main-nav--menu {
+    width: 30%;
+    padding-right: 20vw;
+}
 .main-nav .main-nav--menu ul {
     display: flex;
     float: left;
@@ -39,7 +44,7 @@ body {
     padding: 0 .5rem;
     display: inline;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 3rem;
     line-height: 3rem;
 }
@@ -63,7 +68,7 @@ body {
 }
 .section-about .section-about--left .section-left--container {
     float: right;
-    width: 50%;
+    width: 60%;
     text-align: left;
     margin-right: 2rem;
 }
@@ -80,9 +85,11 @@ body {
 }
 .section-about .section-about--right {
     float: left;
-    margin-right: 5rem;
     width: 50%;
     object-fit: contain;
+}
+.section-about .section-about--left .section-left--container {
+    width: 60%;
 }
 .section-about .section-about--right img {
     height: 25rem;
@@ -123,4 +130,166 @@ body {
     font-size: 1.5rem;
     margin-bottom: .75rem;
 }
-
+.section-news {
+    margin-top: 2rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: fit-content;
+}
+.news-container {
+    display: flex;
+}
+.section-news .news-container .news-col {
+    margin-right: 1.5rem;
+    width: 26vw;
+    border: solid 1px gainsboro;
+    height: fit-content;
+}
+.section-news .news-container .news-col .thumb-img {
+    height: 10rem;
+}
+.section-news .news-container .news-col .thumb-img img {
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.section-news .news-text {
+    margin-top: .5rem;
+}
+.section-news .news-text .news-text--bold {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.section-news .news-container .news-col .news-content .news-title {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.section-news .news-container .news-col .news-content {
+    margin-left: .5rem;
+}
+.section-contact {
+    margin-top: 2rem;
+}
+.contact-title {
+    font-size: 1.5rem;
+}
+.contact-text {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.section-contact--container {
+    display: flex;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.section-contact--left {
+    padding-right: 1rem;
+   width: 50%; 
+}
+.section-contact--right {
+    padding-left: 1rem;
+    width: 50%;
+}
+.section-contact--right img {
+    object-fit: cover;
+    width: 100%;
+}
+.section-contact--left .contact-form .user-info {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.section-contact--left .contact-form .user-info input {
+    width: 27%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+.user-info {
+    margin-bottom: 1rem;
+}
+.user-mess textarea {
+    width: 99%;
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+.section-contact--button {
+    text-align: center;
+    margin-top: 1rem;
+    height: 2.5rem;
+}
+.section-contact--button button {
+    background-color: rgb(255, 180, 1);
+    border: none;
+    color: #fff;
+    border-radius: .5rem;
+    width: 15rem;
+}
+.footer {
+    margin-top: 2rem;
+    background-color: #000;
+    color: grey;
+}
+.footer-container {
+    margin-top: 2rem;
+    display: flex;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.footer-left {
+    width: 50%;
+    float: left;
+    display: flex;
+}
+.footer-left--col {
+    width: 50%;
+    float: left;
+    margin-right: 1rem;
+}
+.footer-right--col {
+    margin-left: 1rem;
+    width: 50%;
+    float: left;
+}
+.footer-right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-headtext {
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.whitetext {
+    color: #fff;
+}
+.footer-left--col p {
+    margin-bottom: 1rem;
+}
+.footer-container ul {
+    margin-left: 1.5rem;
+}
+.footer-submit--form {
+    width: 100%;
+    margin-top: 1rem;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.footer-submit--form input {
+    width: 100%;
+}
+.footer-submit--form button {
+    width: fit-content;
+}
