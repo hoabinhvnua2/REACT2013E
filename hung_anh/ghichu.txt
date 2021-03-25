@@ -1,0 +1,7 @@
+- git config --global user.mail " email "
+- git config --global user.name " branch_name "
+- git clone "Link main" 
+- ls
+- git checkout -b 'feature/branch_name'
+- cd Folder
+- git push
