@@ -1,0 +1,115 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#headerLaptop {
+    height: 60px;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color:rgb(0, 114, 211);
+    position: fixed;
+    z-index: 1;
+}
+
+#headerLaptop .header-slogan {
+    height:60px;
+    position: absolute;
+    margin-left: 300px;
+    line-height: 60px;
+    font-weight:bold;
+}
+
+#headerLaptop .header-slogan a {
+    text-decoration: none;
+    color:white;
+    line-height: 60px;
+}
+
+#headerLaptop .header-menu {
+    position: absolute;
+    display: flex;
+    color: white;
+    list-style: none;
+    right:300px;
+}
+
+#headerLaptop .header-menu a {
+    text-decoration:none;
+    color: white;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 6px;
+    box-sizing: padding-box;
+}
+
+#headerLaptop .header-menu :active a {
+    color:yellow;
+}
+
+#contentLaptop {
+    position: relative;
+    margin-top: 60px;
+}
+
+#contentLaptop .students-img {
+    width:1349px;
+    height:492px;
+    margin: -8px -8px;
+    background-image: url(/Buoi4/Assets/IMG/students.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.aboutus-content {
+    display: flex;
+    margin: 40px 0 0 220px;
+}
+
+.aboutus-content .aboutus-topic {
+    height:325px;
+    width:425px;
+    padding-right:20px
+}
+
+.aboutus-content .business-img {
+    height:325px;
+    width:425px;
+    padding-left:20px;
+    background-image: url(/Buoi4/Assets/IMG/Business.JPG);
+    background-size: 100%;
+}
+
+.aboutus-content .head-aboutus {
+    width:100%;
+    height: 36px;
+    position: relative;
+}
+
+.aboutus-content .head-aboutus .block-blue {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 114, 211);
+    margin-top: 15px;
+}
+
+.aboutus-content .head-aboutus .about-us {
+    position: absolute;
+    top: -29px;
+    margin-left:38px;
+}
+
+#eduContent {
+    width:1349px;
+    height:500px;
+    margin: -8px -8px;
+    background-color:black;
+    margin-top:60px;
+}
+
+#eduContent .big-img {
+    
+}
+
+
+
