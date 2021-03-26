@@ -1,7 +1,66 @@
+Github {
 - git config --global user.mail " email "
 - git config --global user.name " branch_name "
 - git clone "Link main" 
 - ls
 - git checkout -b 'feature/branch_name'
 - cd Folder
+- git status (Thư mục mới được khởi tạo)
+- git add . (Thêm thư mục vào nhánh)
+- git commit -m 'update (file_name)'
 - git push
+}
+
+CSS {
+    span, p,.....tagname ex: p.
+    class.........".name" ex: text-color.
+    id ................"#name" ex: textColorGreen.  
+    !importan > inline >  id > class > tagname.
+}
+
+
+        
+        
+        <!--NEWS-->
+        <div id="newsContent">
+            <div>
+                <div class="block-news"></div>
+                <h5 class="news">News</h5>
+            </div>
+            <strong class="third-paragraph">Lastest News</strong>
+            <div id="lastestNews">            
+                <div class="box-topic">
+                    <img src="" alt=""/>
+                    <b class="topic"></b>
+                    <div>
+                        <p class="read-more"></p>
+                        <div class="icon-readmore"></div>
+                    </div>
+                </div>
+                <div class="box-topic">
+                    <img src="" alt=""/>
+                    <b class="topic"></b>
+                    <div>
+                        <p class="read-more"></p>
+                        <div class="icon-readmore"></div>
+                    </div>
+                 </div>
+                 <div class="box-topic">
+                    <img src="" alt=""/>
+                    <b class="topic"></b>
+                    <p paragraph-topic></p>
+                    <div>
+                        <p class="read-more"></p>
+                        <div class="icon-readmore"></div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+        <!--Contacts-->
+        <div id="contactsContent">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    
