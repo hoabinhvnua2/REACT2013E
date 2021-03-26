@@ -5,4 +5,5 @@ Vấn đề 2 :  Kế hoạch mong muốn:
             Sau khóa học có thể đi làm và phát triển bản thân.
             Bước đầu vào nghề lập trình để trở thành fullstack Developer.
 Vấn đề 3 :  Góp ý cho giảng viên:
-            Chưa có ý kiến.
+            Chưa có ý kiến..
+            
