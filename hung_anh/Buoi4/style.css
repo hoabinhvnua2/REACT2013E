@@ -1,15 +1,33 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+body {
+    top:0;
+    left:0;
+}
+
+.block-head-blue {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 114, 211);
+    margin-top: 15px;
+}
+
+.block-head-white {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-top: 15px;
+}
 
 #headerLaptop {
     height: 60px;
     width: 100%;
-    top:0;
-    left:0;
     background-color:rgb(0, 114, 211);
     position: fixed;
     z-index: 1;
+    top:0;
+    left:0;
 }
 
 #headerLaptop .header-slogan {
@@ -34,17 +52,13 @@
     right:300px;
 }
 
-#headerLaptop .header-menu a {
+#headerLaptop .header-menu a {  
     text-decoration:none;
     color: white;
     line-height: 30px;
     font-size: 12px;
     padding: 6px;
     box-sizing: padding-box;
-}
-
-#headerLaptop .header-menu :active a {
-    color:yellow;
 }
 
 #contentLaptop {
@@ -63,7 +77,8 @@
 
 .aboutus-content {
     display: flex;
-    margin: 40px 0 0 220px;
+    margin: -60px 0 0 220px;
+    padding-top: 110px;
 }
 
 .aboutus-content .aboutus-topic {
@@ -86,29 +101,80 @@
     position: relative;
 }
 
-.aboutus-content .head-aboutus .block-blue {
-    width: 30px;
-    height: 3px;
-    background-color: rgb(0, 114, 211);
-    margin-top: 15px;
-}
-
 .aboutus-content .head-aboutus .about-us {
     position: absolute;
     top: -29px;
     margin-left:38px;
 }
 
-#eduContent {
+.aboutus-content .paragraph {
+    margin-top: -10px;
+}
+
+#bussinesContent {
     width:1349px;
     height:500px;
     margin: -8px -8px;
-    background-color:black;
-    margin-top:60px;
+    margin-top:80px;
+    position: relative;
 }
 
-#eduContent .big-img {
-    
+#bussinesContent .big-img {
+    display: flex; 
+    position: absolute;
+}
+
+#bussinesContent .big-img .left-img {
+    width: 675px;
+    height:400px;
+    background-image: url(/Buoi4/Assets/IMG/Education2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#bussinesContent .big-img .right-img {
+    width: 675px;
+    height:400px;
+    color: white;
+    background-image: url(/Buoi4/Assets/IMG/Communication.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right:0;
+    position: relative;
+}
+
+#bussinesContent .big-img .our-business {
+    position: absolute;
+    margin-top: -8px;
+    margin-left:38px;
+}
+
+#bussinesContent .right-img .business-right-beside {
+    margin: 50px 0 0 40px;
+}
+
+#bussinesContent .handshake-img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-image:url(/Buoi4/Assets/IMG/Handshake.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    margin: 100px 654px;
+    border-radius: 50%;
+    z-index: 1;;
+}
+
+#bussinesContent .Books-img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-image: url(/Buoi4/Assets/IMG/Books.png);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 160px 654px;
+    z-index: 1;
 }
 
 
