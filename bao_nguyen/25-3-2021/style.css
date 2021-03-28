@@ -10,6 +10,9 @@ header {
   display: flex;
   justify-content: space-around;
 }
+.header-none{
+  display: none;
+}
 .header-logo {
   color: #ffffff;
   line-height: 100px;
@@ -42,6 +45,7 @@ article {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+ 
 }
 .f2-tilte {
   width: 35%;
@@ -78,6 +82,7 @@ article {
   height: 590%;
   display: flex;
   margin-top: 100px;
+  
 }
 .f3-1 {
   background-image: url(./img/Education2.jpg);
@@ -325,3 +330,74 @@ footer {
   margin-top: 2px;
   font-size: 10px;
 }
+@media only screen and ( max-width:46.1875em){
+
+
+}
+@media only screen and ( min-width:46.25em ) and (max-width:63.9375em){
+  .article-f3{
+    flex-direction: column;
+  }
+  .f3-form{
+    left: 100px;
+  }
+  .f3-2,.f3-1{
+    width: 95%;
+    margin: 0 auto;
+
+  }
+  .article-f4{
+    width: 700px;
+    margin-bottom: 150px;
+  }
+  .f4-3-li{
+    width: 210px;
+    height: 350px;
+
+  }
+  .f4-3-li-3{
+    width: 210px;
+    height: 590px;
+  }
+  .article-f5{
+    width: 700px;
+    margin-bottom: 100px;
+  }
+  .f5-1-3{
+    flex-direction: column;
+  }
+  .f5-1-3 input{
+    margin: 10px 0;
+    width: 90%;
+  }
+  .f5-1-4 textarea{
+    width: 100%;
+  }
+  .article-f6{
+    margin-top: 210px;
+    
+    
+  }
+  .article-f6 button{
+    position: relative;
+    left: -175px;
+  }
+ 
+  footer{
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-between;
+    padding-top: 80px;
+  
+ 
+  }
+  .ft1__wt{
+    position: relative;
+    left: -200px;
+    height: 100px;
+    top: -70px;
+  }
+  
+  
+}
+
