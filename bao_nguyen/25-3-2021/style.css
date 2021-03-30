@@ -294,12 +294,12 @@ footer {
   margin-top: 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  
 }
 .ft1__wt {
   color: #cccccc;
   width: 255px;
-  height: 150px;
+padding-top: 60px;
 }
 .ft1__marin {
   margin-top: 20px;
@@ -321,9 +321,7 @@ footer {
   margin-top: 2px;
   font-size: 10px;
 }
-.ft1-ft{
 
-}
 @media only screen and (max-width: 46.1875em) {
   .header-none-mb {
     display: none;
