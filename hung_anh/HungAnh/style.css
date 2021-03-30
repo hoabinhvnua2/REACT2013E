@@ -1,0 +1,423 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.head-blue-block {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 114, 211);
+    margin: auto 0.7em auto 0;
+}
+
+.head-white-block {
+    width: 30px;
+    height: 3px;
+    background-color:white;
+    margin: auto 0.7em auto 0;
+}
+
+.fa-long-arrow-alt-right {
+    font-size: 0.7em;
+}
+#header {
+    width:100%;
+    height:5em;
+    background-color: rgb(0,114,211);
+    top:0;
+    left:0;
+    position: fixed;
+    display:flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+#header .crevea-inc {
+    color:white;
+    line-height: 3.6em;
+    font-size: 1.4em;
+}
+
+#header .crevea-inc a {
+    text-decoration: none;
+    color:white;
+}
+
+#header .menu li {
+    display:inline-block;
+}
+
+#header .menu li a {
+    color:white;
+    text-decoration: none;
+    font-size: 0.8em;
+    line-height: 6.2em;
+    padding: 0 0.5em;
+}
+
+#slider {
+    margin-top: 5em;
+    width: 100vw;
+    height: 40vw;
+    background-image: url(/HungAnh/IMG/students.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+#aboutUs {
+    width:100vw;
+    height:calc(60vh+0.5em);
+    padding-top:5vw;
+    margin-top:-5vw;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutUs .aboutus-content {
+    width:30vw;
+    height:auto;
+    margin-top: 3em;
+    padding-right:1em;
+    box-sizing: border-box;
+
+}
+
+#aboutUs .aboutus-content p {
+    width:auto;
+    height:auto;
+    font-size: 0.8em;
+    margin-top:1em;
+}
+
+#aboutUs .aboutus-img {
+    width:30vw;
+    height:21.3vw;
+    background-image: url(/HungAnh/IMG/Business.JPG);
+    background-size: 100%;
+    margin-top: 3em;
+}
+ 
+#aboutUs .aboutus-header {
+    width: 100%;
+    height:2em;
+    display: flex;
+}
+
+#aboutUs .aboutus-header h6 {
+    line-height: 3em;
+}
+
+#ourBusiness {
+    width: 100vw;
+    height:25vw; 
+    position: relative;  
+    padding-top: 10vw;
+    margin-top: -5vw;
+}
+
+#ourBusiness .left-img {
+    position: absolute;
+    width: 50%;
+    height:25vw;
+    background-image: url(/HungAnh/IMG/Education2.jpg);
+    background-size: 100% 100%;
+}  
+
+#ourBusiness .right-img {
+    position: absolute;
+    right:0;
+    width: 50%;
+    height:25vw;
+    background-image: url(/HungAnh/IMG/Communication.jpg);
+    background-size: 100% 100%;
+    color:white
+} 
+
+#ourBusiness .right-img .our-bussiness-header {
+    height:2em;
+    display: flex;
+    margin: 5% 0 0 5%;
+}
+
+#ourBusiness .our-bussiness-header h6 {
+    line-height: 3em;
+}
+
+#ourBusiness .right-img h3, #ourBusiness .right-img p{
+    width: auto;
+    height:auto;
+    padding:1%;
+    margin-left:3.8%;
+}
+
+#ourBusiness .hand-shake{   
+    position: absolute;
+    width: 2.5%;
+    height:10%;
+    background-image: url(/HungAnh/IMG/Handshake.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 6vw 48.8vw 0;
+    border-radius: 50%;
+
+}
+
+#ourBusiness .books {  
+    position: absolute;
+    width: 2.5%;
+    height:10%;
+    background-image: url(/HungAnh/IMG/Books.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 10vw 48.8vw 0;
+    border-radius: 50%;
+}
+
+#lastestNews {
+    width: 76vw;
+    height: auto;
+    padding:8vw;
+    margin: 8vw auto 0;
+    box-sizing: content-box;
+}
+
+#lastestNews .news-header {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+#lastestNews .news-topic {
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lastestNews .news-topic .topic1,#lastestNews .news-topic .topic2 {
+    width:30%;
+    height:100%;
+    border: rgb(204,204,204) solid 1px;
+}
+
+#lastestNews .news-topic .topic3 {
+    width:30%;
+    height:auto;
+    border: rgb(204,204,204) solid 1px;
+}
+
+#lastestNews .topic1 .topic-img1{
+    width:100%;
+    height:15vw;
+    background-image: url(/HungAnh/IMG/News\ 2.jpg);
+    background-size:100% 100%;
+}
+
+#lastestNews .topic2 .topic-img2{    
+    width:100%;
+    height:15vw;
+    background-image: url(/HungAnh/IMG/News\ 1.jpg);
+    background-size:100% 100%;
+}
+
+#lastestNews .topic3 .topic-img3{
+    width:100%;
+    height:15vw;
+    background-image: url(/HungAnh/IMG/Class.jpg);
+    background-size:100% 100%;
+}
+
+.div-read-more {
+    width: 100%;
+    padding:0.8vw 0;
+    margin-left: 0.8vw;
+    font-size: 70%;
+}
+
+#lastestNews .news-topic .topic-paragraph {
+    margin-top:4%;
+    margin-left:0.8vw;
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+#lastestNews .topic3 p {
+    margin-top:1vw;
+    margin-left:4%;
+    font-size: 0.8em;
+}
+
+#Contacts {
+    width: 60%;
+    height:auto;
+    padding-top:10vw;
+    margin:-10vw auto 0;
+    display: flex;
+}
+
+#Contacts .form-message {
+    width: 55%;
+    height: auto;
+    padding-right:2vw;
+}
+
+#Contacts .contacts-header {
+    display: flex;
+    padding-bottom: 1vw;
+}
+
+#Contacts .contacts-img {
+    width:50%;
+    height:20vw;
+    background-image: url(/HungAnh/IMG/Map.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+}
+
+#Contacts .form-message .div-input-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Contacts .div-input-info input {
+    width:30%;
+    height:2.5em;
+    margin:0.5em 0;
+    padding:0.5em;
+    border-radius: 0.2em;
+    border:rgb(204,204,204) solid 1px;
+    box-sizing: border-box;
+}
+
+#message {
+    margin-top: 1.5vw;
+    padding:0.5em;
+    width: 100%;
+    height:10vw;
+    border-radius: 0.2em;
+    border:rgb(204,204,204) solid 1px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div-send-message {
+    width: 100vw;
+    height:2.5em;  
+}
+
+.div-send-message .send-message {
+    width: 10em;
+    height:2.5em;
+    padding:0.5em;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    border-style: none;
+    background-color: rgb(255,180,0);
+    color:white;
+    margin-left:45vw;
+}
+
+#footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(27,25,25);
+    color: rgb(189,200,189);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8vw;
+}
+
+#footer .info-footer {
+    width: 65%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    margin:auto auto;
+    padding:3vw 0;
+    box-sizing: border-box;
+}
+
+#footer .info-footer h2,#footer .info-footer b {
+    font-weight: normal;
+    color: white;
+}
+
+
+
+#footer .info-footer .footer1 {
+    width: 22%;
+
+}
+
+.footer1 p {
+    line-height: 2vw;
+}
+
+.footer2 p , .footer3 p {
+    word-spacing:0.3vw;
+    padding:0.2vw 0;
+}
+
+.footer4 p {
+    padding:0.2vw 0;    
+}
+
+#footer .info-footer .footer2 {
+    width: 20%;
+}
+
+#footer .info-footer .footer3 {
+    width: 20%;
+}
+
+#footer .info-footer .footer4 {
+    width: 24%;
+}
+
+#email {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    padding:1vw 0;
+}
+
+#email .input-email {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0.2em;
+    background-color: rgb(27,25,25);
+    padding: 1vw 0;
+    color:white;
+}
+
+#email .button-email {
+    height:2vw;
+    position: absolute;
+    margin-left:12vw;
+    border:none;
+}
+
+.copy-right {
+    width: 100%;
+    height:3vw;
+    background-color: rgb(27,25,25);
+    text-align: center;
+    padding:1vw 0;
+}
+
