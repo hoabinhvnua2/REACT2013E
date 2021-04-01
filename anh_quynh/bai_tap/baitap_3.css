@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+.custom-header {
+    background-color:#3399ff;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 150px;
+}
+.custom-header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 12px;
+}
+#custom-active {
+    color: orange;
+}
+
+.custom-header-right {
+    float: right;
+}
+.custom-header-right span {
+    cursor: pointer;
+}
+/* banner */
+.custom-banner img {
+    width: 100%;
+}
+/* about us */
+.custom-aboutus {
+    padding: 25px 150px;
+}
+.custom-aboutus2 {
+    width: 50%;
+    height: 415px;
+    float: left;
+}
+.custom-aboutus1 {
+    height: 415px;
+    float: left;
+    padding-right: 20px;
+    width: calc(50% - 20px);
+}
+.custom-aboutus1 img {
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+/* photo */
+.custom-photo {
+    margin-top: 85px;
+    position: relative;
+}
+.custom-photo1 img {
+    width: 50%;
+    float: left;
+    height: 392px;
+}
+.custom-photo2 img {
+    width: 4%;
+}
+.custom-photo2 {
+    position: absolute;
+    top: 20px;
+    left: 52%;
+    color: white;
+}
+.custom-photo2 ul {
+    list-style: none;
+}
+/* News */
+.custom-news {
+    padding: 0 150px;
+}
+.custom-block {
+    width: 30%;
+    float: left;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+}
+.custom-block img {
+    width: 100%;
+    height: 193px;
+}
+.custom-block a {
+ text-decoration: none;
+ color:black;
+}
+.custom-readmore {
+    font-size: 12px;
+}
+/* contacts */
+form {
+    padding: 25px 150px;
+}
+.custom-contact {
+    width: 50%;
+    float: left;
+}
+.custom-contact img {
+    width: 100%;
+    height: 125px;
+}
+.custom-contact-input {
+    display: flex;
+    margin: 10px 0;
+}
+.custom-contact input {
+    margin-right: 5px;
+}
+.custom-contact textarea {
+    width: 95%;
+    height: 100px;
+}
+.custom-button button {
+    background-color: #FDB32B;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+.custom-button {
+    text-align: center;
+}
+/* footer */
+footer {
+    background-color: black;
+    font-size: 12px;
+    line-height: 19px;
+}
+.custom-footer {
+    color: white;
+    display: flex;
+    padding: 10px 150px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+.custom-footer-block {
+    width: 25%;
+}
+.custom-footer-block input {
+    background-color: black;
+}
+.custom-copyright {
+    color: white;
+    text-align: center;
+    margin:0;
+}
