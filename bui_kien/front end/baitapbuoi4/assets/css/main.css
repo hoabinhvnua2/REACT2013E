@@ -1,0 +1,78 @@
+#wrapper{
+    width: 960px;
+    margin: 0px auto;
+}
+.header{
+    background-color:forestgreen;
+    width: 100%;
+    display: flex;
+    color: cornsilk;
+    
+}
+.logo{
+    padding-left: 30px;
+}
+ul{
+    display: flex;
+    padding-left: 300px;
+    color: ghostwhite;
+}
+li{
+    padding: 15px;
+    list-style: none;
+    color: white;
+    
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 960px;
+}
+.img-text{
+    max-width: 300px;
+    max-height: 100px;
+    
+}
+.text{
+   float: left;
+   text-align: left;
+    
+}
+ul li a:hover {
+    color: chartreuse;
+}
+.content-1{
+    display:flex;
+    width: 600px;
+    text-align: center;
+    margin-top: 20px;
+    
+    
+}
+.left{
+    float: left;
+    margin-left: 185px;
+    max-height: 200px;
+    
+}
+.content-2{
+    display: flex;
+    position: relative;
+}
+.battay{
+    position: absolute;
+    top:60px;
+    left: 650px;
+}
+.book{
+    position: absolute;
+    top: 120px;
+    left: 650px;
+}
+.list-post{
+    
+}
+.content-3{
+
+}
