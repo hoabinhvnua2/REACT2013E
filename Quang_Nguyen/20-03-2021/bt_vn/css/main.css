@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+.header {
+  background: rgb(41, 99, 207);
+  padding: 20px 270px;
+  height: 60px;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: white;
+  float:left;
+}
+.header .topnav {  
+  float: right;
+}
+.header .topnav a {
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding-left: 10px;
+}
+.header .topnav a:hover {
+  color: yellow;
+}
+
+.header::after {
+  content: "";
+  clear: both;
+}
+
+/* slide image */
+.slide {
+  background-color: #aaa;
+  width: 100%;
+}
+
+/* About */
+.about {
+  padding: 20px 270px;
+  height: 60px;
+}
+.about .a-left {
+  width: 50%;
+  font-size: 14px;
+  float: left;
+}
+.about .a-left h3 {
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.about .a-left div {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.about .a-left p {
+  font-size: 13px;
+}
+
+.about .a-image  {
+  width: 50%;
+  float: left;
+}
+.about .a-image img {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.about::after {
+  content: "";
+  clear: both;
+}
+
+.services {
+  width: 100%;
+}
