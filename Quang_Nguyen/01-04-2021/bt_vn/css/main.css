@@ -55,10 +55,23 @@ body {
   font-size: 14px;
   float: left;
 }
-.about .a-left h3 {
-  font-size: 12px;
-  padding-bottom: 15px;
+.about .a-left h1 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
 }
+.about .a-left h1::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: rgb(60, 142, 209);
+}
+
 .about .a-left div {
   font-weight: bold;
   font-size: 20px;
@@ -72,15 +85,33 @@ body {
   width: 50%;
   float: left;
 }
+
 .about .a-image img {
   width: 100%;
-  padding-bottom: 50px;
 }
+
 .about::after {
   content: "";
   clear: both;
 }
-
+/* Phần service */
 .services {
   width: 100%;
+}
+
+.services .s-left {
+  width: 50%;
+  float:left;
+}
+.services .s-left img{
+  width: 100%;
+}
+
+.services .s-right {
+  width: 50%;
+  float:left;
+}
+.services::after {
+  content: "";
+  clear: both;
 }
