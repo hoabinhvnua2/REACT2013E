@@ -11,10 +11,11 @@
 
 <body>
     <div class="main-nav">
+        <div class="main-nav--button" onclick="shownavmenu()"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
         <div class="main-nav--logo">
-            <p>crevea <span>Inc</span></p>
+            <p>crevea <span>Inc.</span></p>
         </div>
-        <div class="main-nav--menu">
+        <div class="main-nav--menu" id="nav">
             <ul class="menu-container">
                 <li class="menu-item home"><a href="#">Home</a></li>
                 <li class="menu-item"><a href="#">our business</a></li>
@@ -24,6 +25,7 @@
                 <li class="menu-item"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
             </ul>
         </div>
+        <div class="main-nav--search"><a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></div>
     </div>
     <div class="main-cover">
         <img src="img/students.jpg" alt="vanmieu">
@@ -42,7 +44,7 @@
                 <p class="about-foot">Our staff are highly experienced and senior members of diverse backgrounds in
                     education institutions and companies in Vietnam and other territories across the globe. We could
                     provide
-                    superior services to our customers</p>
+                    superior services to our customers.</p>
             </div>
         </div>
         <div class="section-about--right">
@@ -56,13 +58,29 @@
         </div>
         <div class="section-business--right">
             <div class="business-content">
-                <p>Our business</p>
-                <p class="business-content--bold">
-                    Education consulting
-                </p>
-                <p>We offer various services as required from different education institutions in Vietnam</p>
-                <p class="business-content--bold">Business consulting</p>
-                <p>We provide various services according to foreign companies and educational institutions.</p>
+                <div>
+                    <p class="business-title">Our business</p>
+                    <div class="container-content--1">
+                        <div class="business-content1--icon">
+                            <img src="img/Handshake.jpg" alt="">
+                        </div>
+                        <div class="business-content--1">
+                            <p class="business-content--bold">
+                                Education consulting
+                            </p>
+                            <p>We offer various services as required from different education institutions in Vietnam</p>
+                        </div>
+                    </div>
+                    <div class="container-content--2">
+                        <div class="business-content2--icon">
+                            <img src="img/Books.png" alt="">
+                        </div>
+                        <div class="business-content--2">
+                            <p class="business-content--bold">Business consulting</p>
+                            <p>We provide various services according to foreign companies and educational institutions.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -123,13 +141,13 @@
                         </div>
                     </form>
                 </div>
+                <div class="section-contact--button">
+                    <button id="contact-button">Send Message</button>
+                </div>
             </div>
             <div class="section-contact--right">
                 <img src="img/Map.png" alt="bản đồ">
             </div>
-        </div>
-        <div class="section-contact--button">
-            <button id="contact-button">Send Message</button>
         </div>
     </section>
     <div class="footer">
@@ -174,7 +192,7 @@
         <hr>
         <div class="footer-copyright">&copy;2018 CREVEA Inc. All rights Reserved.</div>
     </div>
-
+<script src="myscript.js"></script>
 
 </body>
 
