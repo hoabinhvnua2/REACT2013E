@@ -775,8 +775,9 @@ html {
 
     .business-content1--icon,
     .business-content2--icon {
-        margin: auto;
         margin-right: 2rem;
+        position: absolute;
+        margin-left: -3%;
     }
 
     .business-content1--icon img {
