@@ -715,6 +715,29 @@ textarea {
         background-image: url(/IMG/Class.jpg);
         background-size:100% 100%;
     }
+
+    #Contacts {
+        flex-direction: column;
+    }
+
+    #Contacts .form-message  {
+        width: 100%;
+    }
+
+    #Contacts .contacts-img {
+        margin-top: 5vw;
+        height:60vw;
+        width: 100%;
+    }
+
+    .div-send-message .send-message {
+        margin-left:25vw;
+    }
+
+    #footer {
+        margin-top:-10vw;
+    }   
+
 }
 
 @keyframes fateIn {
