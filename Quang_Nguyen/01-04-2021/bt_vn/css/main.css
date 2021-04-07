@@ -46,23 +46,22 @@ body {
 }
 
 /* About */
-.about {
+.about, .news {
   padding: 20px 270px;
-  height: 60px;
 }
 .about .a-left {
   width: 50%;
   font-size: 14px;
   float: left;
 }
-.about .a-left h1 {
+.about .a-left h3 {
   position: relative;
   padding-left: 40px;
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: lighter;
 }
-.about .a-left h1::before {
+.about .a-left h3::before {
   content:"";
   width: 30px;
   height: 3px;
@@ -90,13 +89,12 @@ body {
   width: 100%;
 }
 
-.about::after {
-  content: "";
-  clear: both;
-}
 /* Phần service */
 .services {
   width: 100%;
+  height: 485px;
+  margin-top: 50px;
+  position: relative;
 }
 
 .services .s-left {
@@ -105,13 +103,129 @@ body {
 }
 .services .s-left img{
   width: 100%;
+  height: 485px;
 }
 
 .services .s-right {
   width: 50%;
-  float:left;
+  float: right;
 }
-.services::after {
-  content: "";
+
+.services .s-right h3 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.services .s-right h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: white;
+}
+
+.right-text-image {
+  position:absolute;
+  top: 15%;
+  left: 48%;
+  width: 700px;
+}
+.right-text-image .title {
+  padding-left: 5%;
+}
+.right-text-image .img-in-text1,
+.right-text-image .img-in-text2 {
+  width: 30%;
+  float: left;
+}
+.right-text-image .title-1 {
+  width: 70%;
+  float: right;
+}
+.right-text-image .title-2 {
+  width: 70%;
+  float: left;
+}
+
+.right-text-image .title-1 h3,.right-text-image .title-2 h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.right-text-image img {
+  border-radius: 30px;
+}
+
+.text-white {
+  color: white;
+}
+
+.clear {
   clear: both;
+}
+
+.news {
+  width: 100%;
+}
+
+.news h3 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.news h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: blue;
+}
+.news p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.news .latest-news {
+  float:left;
+  width: 30%;
+  border: 1px solid gray;
+  margin-right: 30px;
+  display: block;
+}
+
+.news .latest-news div {
+ padding: 10px; 
+}
+
+.news .latest-news img {
+  width: 100%;
+  height: 180px;
+}
+
+.news .latest-news div>h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.news .latest-news div>a {
+  padding-top: 10px;
+  font-size: 12px;
+  display: block;
+}
+.news .latest-news div a {
+  text-decoration: none;
+}
+.news .latest-news div p {
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 10px 10px 0 0;
 }
