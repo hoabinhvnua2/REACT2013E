@@ -1,0 +1,257 @@
+
+body{
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #222;
+}
+
+.navbar {
+    opacity: 0.7;
+    background-color: #0072D3 !important;
+    z-index: 999;
+}
+.navbar li a {
+    color: white !important;
+}
+.a1{
+    color: white !important;
+}
+.navbar-branch {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar li a:hover,  .navbar li.active a {
+    color: red !important;
+}
+.carousel-inner img {
+    width: 100%;
+
+}
+.CREVEA{
+    font-size: 25px;
+    padding-left: 10%;
+  
+}
+.aaa{
+    text-decoration: none;
+    margin-top: 10px;
+}
+.padding1 {
+    margin-top: 70px;
+    font-size: 15px;
+    height: 400px;
+   margin-bottom: 70px;
+}
+.h2 {
+    font-size: 20px;
+   
+}
+.h2:hover{
+    color: red;
+ }
+ .span1:hover{
+    color: red;
+    font-weight: bold;
+ }
+ .span2{
+     color: turquoise;
+ }
+ #img4{
+     height: 400px;
+ }
+
+.anh11{
+    background-image: url('./img/Education2.jpg');
+    background-size: 100% 500px;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 500px;
+
+}
+.anh22{
+    background-image: url('./img/Communication.jpg');
+    background-size: 100% 500px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    color: white;
+ }
+ .anh22 ul{
+    margin: 0px;
+    padding: 0px;
+ }
+ .anh22 ul li {
+    list-style: none;
+    clear: left;
+    float: left;
+ }
+.anh22 ul li img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 55px;
+    margin-left: -55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+ }
+
+.anh22 p {
+    font-size: 20px;
+    margin-left: 35px;
+    margin-top: 50px;
+    margin-bottom: -5px;
+}
+
+@media screen and (max-width:767px){
+    #img4{
+        width: 100%;
+        height: 300px;
+    }
+    .anh11 {
+        margin-bottom: -30px;
+    }
+   #aboutus{
+       margin-bottom: 300px;
+   }
+    .anh11{
+        background-image: url('./img/Education2.jpg');
+        background-size: 100% 250px;
+       background-repeat: no-repeat;
+       width: 100%;
+       height: 250px;
+    
+    }
+    #main1{
+        margin-bottom: 800px;
+    }
+    .anh22 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    
+    .anh22 ul li img{
+        margin-left: 0px;
+    }
+    #main23 h1 {
+        padding-left: 0%;
+    }
+    #main23 p {
+        padding-left: 0%;
+     }
+     #main1 {
+        width: 100%;
+        height: 100%;
+      
+    }
+   
+    .padding3{
+        margin-top: 300px;
+
+    } 
+}
+
+@media screen and (max-width:1023px) and (min-width:768px){
+    #aboutus {
+       margin-bottom: 250px;
+    }
+    .anh22 ul li img{
+        margin-left: 0px;
+    }
+
+  
+}
+
+
+#main1 {
+    width: 60%;
+    height: 500px;
+    margin-left: 20%;
+  
+}
+    #main2{
+    width: 100%;
+    height: 100%;
+  
+    margin-top: 100px;
+}
+
+#main23{
+  margin-top: 10px;
+    width: 100%;
+}
+
+#main23 a{
+    text-decoration: none;
+    color: black;
+ }
+ #main23 a:hover{
+    color: red;
+  font-weight: bold;
+ }
+ #main23 a p span{
+    color:aqua;
+ }
+ .thumbnail {
+     padding: 0 0 15px 0;
+     border: none;
+     border-radius: 0;
+     border: 1px solid rgb(238, 235, 235);
+ }
+ .thumbnail img {
+     width: 100%;
+     height: 100%;
+     margin-bottom: 10px;
+ }
+ .thumbnail a{
+    text-decoration: none;
+    color: black;
+ }
+ .thumbnail a h2 {
+     font-size: 20px;
+
+ }
+ .thumbnail a:hover{
+     color: red;
+ }
+
+.padding3{
+    margin-top: 70px;
+}
+
+#googleMap {
+    margin-top: 30px;
+}
+
+#button {
+    margin-top: 10px;
+}
+
+#LienHe {
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    text-align: left;
+}
+#footer2 ul li{
+   
+ }
+ #footer2 ul li a{
+     text-decoration: none;
+     color: white;
+ }
+ #footer2 {
+     text-align: left;
+ }
+ #footer2 h3 {
+     margin-top: 10px;
+font-size: 20px;
+ }
+ #thongtin {
+     background-color: black;
+     color: white;
+     font-size: 20px;
+     margin-top: 1px;
+     margin-bottom: 50px;
+ }
