@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-nav">
+        <div class="main-nav--button" onclick="shownavmenu()"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+        <div class="main-nav--logo">
+            <p>crevea <span>Inc.</span></p>
+        </div>
+        <div class="main-nav--menu" id="nav">
+            <ul class="menu-container">
+                <li class="menu-item home"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">our business</a></li>
+                <li class="menu-item"><a href="#">about us</a></li>
+                <li class="menu-item"><a href="#">news</a></li>
+                <li class="menu-item"><a href="#">contact</a></li>
+                <li class="menu-item"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="main-nav--search"><a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></div>
+    </div>
+    <div class="main-cover">
+        <img src="img/students.jpg" alt="vanmieu">
+    </div>
+    <section class="section-about">
+        <div class="section-about--left">
+            <div class="section-left--container">
+                <p class="about">about us</p>
+                <p class="about-content">
+                    Our goal is "to support and connect educational institutions, companies across the world by
+                    providing
+                    highly qualified/skilled human resource for mutual development and consulting services in job and
+                    skills
+                    training". Achieving this, we hope to contribute to the betterment of society.
+                </p>
+                <p class="about-foot">Our staff are highly experienced and senior members of diverse backgrounds in
+                    education institutions and companies in Vietnam and other territories across the globe. We could
+                    provide
+                    superior services to our customers.</p>
+            </div>
+        </div>
+        <div class="section-about--right">
+            <div class="section-right--container"></div>
+            <img src="img/Business.JPG" alt="doanh nhân">
+        </div>
+    </section>
+    <section class="section-business">
+        <div class="section-business--left">
+            <img src="img/Education2.jpg" alt="education">
+        </div>
+        <div class="section-business--right">
+            <div class="business-content">
+                <div>
+                    <p class="business-title">Our business</p>
+                    <div class="container-content--1">
+                        <div class="business-content1--icon">
+                            <img src="img/Handshake.jpg" alt="">
+                        </div>
+                        <div class="business-content--1">
+                            <p class="business-content--bold">
+                                Education consulting
+                            </p>
+                            <p>We offer various services as required from different education institutions in Vietnam</p>
+                        </div>
+                    </div>
+                    <div class="container-content--2">
+                        <div class="business-content2--icon">
+                            <img src="img/Books.png" alt="">
+                        </div>
+                        <div class="business-content--2">
+                            <p class="business-content--bold">Business consulting</p>
+                            <p>We provide various services according to foreign companies and educational institutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-news">
+        <div class="news-text">
+            <p class="news-text--small">News</p>
+            <p class="news-text--bold">Latest News</p>
+        </div>
+        <div class="news-container">
+            <div class="news-col">
+                <div class="thumb-img">
+                    <img src="img/News2.jpg" alt="news1">
+                </div>
+                <div class="news-content">
+                    <p class="news-title">Japanese staff agency company visited to Hanoi</p>
+                    <p class="news-text">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+                </div>
+            </div>
+            <div class="news-col">
+                <div class="thumb-img">
+                    <img src="img/News1.jpg" alt="news2">
+                </div>
+                <div class="news-content">
+                    <p class="news-title">Taiwanese university visited to Hanoi</p>
+                    <p class="news-text">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+                </div>
+            </div>
+            <div class="news-col">
+                <div class="thumb-img">
+                    <img src="img/Class.jpg" alt="class">
+                </div>
+                <div class="news-content">
+                    <p class="news-title">We are pleased to announce the renewal of CREVEA Inc. official website</p>
+                    <p class="news-text2">We changed the whole design and format to create more efficient and superior
+                        experience for our customers once they visit the website. We will continue updating it and
+                        providing
+                        more useful information. The website in Japanese will come out soon.</p>
+                    <p class="news-text">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-contact">
+        <div class="section-contact--container">
+            <div class="section-contact--left">
+                <div class="contact-title">Contacts</div>
+                <div class="contact-text">We will contact you with the relevant person in charge. Please click "Send
+                    button" after providing your registering input</div>
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="user-info">
+                            <input type="text" id="username" placeholder="Your name">
+                            <input type="email" id="useremail" placeholder="Email address">
+                            <input type="number" name="userphone" id="userphone" placeholder="Phone number">
+                        </div>
+                        <div class="user-mess">
+                            <textarea placeholder="Your message" id="usermess" rows="8"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="section-contact--button">
+                    <button id="contact-button">Send Message</button>
+                </div>
+            </div>
+            <div class="section-contact--right">
+                <img src="img/Map.png" alt="bản đồ">
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-left--col">
+                    <div class="footer-headtext">crevea</div>
+                    <p><span class="whitetext">Add:</span> No 45C, 210 alley Hoang Quoc Viet, street Cau Giay - Ha Noi
+                        - Viet Nam</p>
+                    <p><span class="whitetext">TEL:</span> (+84)-989-412-665</p>
+                    <p><span class="whitetext">Email:</span> daisuke.kawashima@crevea.com</p>
+                </div>
+                <div class="footer-left--col">
+                    <div class="footer-headtext">categorys</div>
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>Home</li>
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>News</li>
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>About us</li>
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>Our business</li>
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-right--col">
+                    <div class="footer-headtext">language</div>
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>English</li>
+                        <li><i class="fa-li fa fa-chevron-right" aria-hidden="true"></i>Japanese</li>
+                    </ul>
+                </div>
+                <div class="footer-right--col">
+                    <div class="footer-headtext">get our news from us</div>
+                    <div>Please enter your email below to not miss the latest news from us!</div>
+                    <div class="footer-submit--form">
+                        <input type="email" placeholder="Your email enter">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">&copy;2018 CREVEA Inc. All rights Reserved.</div>
+    </div>
+<script src="myscript.js"></script>
+
+</body>
+
+</html>
