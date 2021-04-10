@@ -220,21 +220,21 @@
 #News .topic1 .topic-img1{
     width:100%;
     height:15vw;
-    background-image: url(/TranHungAnh/IMG/News\ 2.jpg);
+    background-image: url(/BaiTapResponsive/IMG/News\ 2.jpg);
     background-size:100% 100%;
 }
 
 #News .topic2 .topic-img2{    
     width:100%;
     height:15vw;
-    background-image: url(/TranHungAnh/IMG/News\ 1.jpg);
+    background-image: url(/BaiTapResponsive/IMG/News\ 1.jpg);
     background-size:100% 100%;
 }
 
 #News .topic3 .topic-img3{
     width:100%;
     height:15vw;
-    background-image: url(/TranHungAnh/IMG/Class.jpg);
+    background-image: url(/BaiTapResponsive/IMG/Class.jpg);
     background-size:100% 100%;
 }
 
@@ -281,7 +281,7 @@
 #Contacts .contacts-img {
     width:50%;
     height:20vw;
-    background-image: url(/TranHungAnh/IMG/Map.png);
+    background-image: url(/BaiTapResponsive/IMG/Map.png);
     background-repeat: no-repeat;
     background-size: 100% 50%;
 }
@@ -698,21 +698,21 @@ textarea {
     #News .topic1 .topic-img1{
         width:100%;
         height:70vw;
-        background-image: url(/TranHungAnh/IMG/News\ 2.jpg);
+        background-image: url(/BaiTapResponsive/IMG/News\ 2.jpg);
         background-size:100% 100%;
     }
     
     #News .topic2 .topic-img2{    
         width:100%;
         height:70vw;
-        background-image: url(/TranHungAnh/IMG/News\ 1.jpg);
+        background-image: url(/BaiTapResponsive/IMG/News\ 1.jpg);
         background-size:100% 100%;
     }
     
     #News .topic3 .topic-img3{
         width:100%;
         height:70vw;
-        background-image: url(/TranHungAnh/IMG/Class.jpg);
+        background-image: url(/BaiTapResponsive/IMG/Class.jpg);
         background-size:100% 100%;
     }
 
@@ -735,7 +735,7 @@ textarea {
     }
 
     #footer {
-        margin-top:-10vw;
+        
     }   
 
 }
