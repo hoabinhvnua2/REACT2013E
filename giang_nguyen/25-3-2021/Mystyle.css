@@ -1,0 +1,207 @@
+.flex-container {
+    display: flex;
+    background-color: rgba(0, 114, 211, 255);
+    color: white;
+    padding: 2%;
+}
+
+.flex-child {
+    flex: 1;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.flex-child ul {
+    display: flex;
+}
+
+.flex-child ul li {
+    padding: 0 1%;
+}
+
+.flex-child-logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex-child ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.flex-child:first-child {
+    margin-right: 2%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+@media (min-width: 575.98px) {
+    .title-container {
+        padding: 5% 15% 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+
+@media (min-width: 575.98px) {
+    .image-container {
+        display: flex;
+    }
+}
+
+.education {
+    max-width: 100%;
+}
+
+.communication {
+    max-width: 100%;
+}
+
+/* bức ảnh thay đổi theo kích thước của browser */
+
+
+.cover-image {
+    display: grid;
+    height: 100%;
+}
+
+.cover-image1 {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.icon {
+    width: 5%;
+    height: 5%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+
+.content {
+    display: flex;
+
+}
+
+.big {
+    position: relative;
+    color: white;
+}
+
+.cont {
+    position: absolute;
+    top: 25%;
+    left: 48.5%;
+    translate: (-50%, -50%);
+}
+
+@media (min-width: 575.98px) {
+    .news {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .big-new {
+        padding: 0px 13% 0px 15%;
+    }
+
+    .new-cont {
+        margin: 0 3% 0 0;
+        border: 1px solid gray;
+        width: 30%;
+    }
+
+    .new-cont img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+@media (min-width: 575.98px) {
+    .infor {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    .contacts {
+        display: flex;
+        margin: 5% 15%;
+    }
+
+    .contact1 {
+        width: 50%;
+    }
+
+    .message {
+        margin-top: 5%;
+        height: 300px;
+    }
+
+    .map {
+        margin-left: 3%;
+    }
+
+    .infor input,
+    textarea {
+        border-radius: 5px;
+    }
+
+    .map-image {
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(27, 25, 25, 255);
+    color: white;
+    padding: 1% 15%;
+}
+
+
+.footer a:link {
+    text-decoration: none;
+}
+
+.footer ol,
+ul {
+    padding: 0;
+}
+
+.crevea {
+    padding: 0
+}
+
+.footer_1 {
+    padding: 5%;
+}
+
+.footer_1-form {
+    display: flex;
+}
+
+.watermark {
+    margin-top: 1px;
+    background-color: rgba(27, 25, 25, 255);
+    text-align: center;
+    color: white;
+}
