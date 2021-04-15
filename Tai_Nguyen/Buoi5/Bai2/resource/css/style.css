@@ -1,0 +1,152 @@
+li {
+  list-style: none;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+.hide-icon-search {
+  display: none;
+}
+
+.show-icon-search {
+  display: none;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.d-flex input {
+  width: 30%;
+}
+
+@media only screen and (max-width: 576px) {
+  .hide-icon-search {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .show-icon-search {
+    display: block;
+  }
+}
+
+header .navbar {
+  background-color: #0072d3;
+}
+
+header .navbar .navbar-brand {
+  color: white !important;
+}
+
+header .navbar .collapse ul li .nav-link {
+  color: white;
+}
+
+header .navbar .collapse ul .active .nav-link {
+  color: white;
+}
+
+.main .new,
+.about,
+.contact {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 14px;
+  position: relative;
+  padding-left: 10px;
+  margin-left: 40px;
+}
+
+.title::before {
+  top: 10px;
+  left: -40px;
+  position: absolute;
+  content: "";
+  background-color: #0072d3;
+  width: 40px;
+  height: 4px;
+}
+
+.main .banner {
+  position: relative;
+}
+
+.main .banner .d-flex img {
+  height: 400px;
+  width: 100%;
+}
+
+.main .banner .inner-content {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 48%;
+  display: block;
+  color: white;
+}
+
+.main .banner .inner-content .d-flex .content {
+  margin-left: 10px;
+  max-width: 600px;
+}
+
+.main .banner .inner-content .d-flex .content p {
+  font-size: 10px;
+}
+
+.main .slide img {
+  width: 100%;
+}
+
+.main .contact input[type="button"] {
+  background: orange;
+  border-radius: 5px;
+  border: outset 2px orange;
+  outline: none;
+  cursor: pointer;
+}
+
+footer {
+  padding-top: 70px;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+}
+
+footer .copyright::before {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 1px;
+  margin: 20px 0px;
+}
+
+footer a {
+  color: white;
+}
+
+footer ul .header {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+footer ul li {
+  list-style: square;
+}

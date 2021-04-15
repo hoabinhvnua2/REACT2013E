@@ -1,0 +1,102 @@
+.main {
+  width: 80%;
+  margin: 0 auto;
+  border: solid 1px black;
+  padding: 10px;
+}
+
+.main .container1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main .container1 .element {
+  margin-right: 10px;
+  height: 30px;
+  flex-grow: 1;
+  border: solid 1px black;
+  box-sizing: border-box;
+}
+
+.main .container1 .element:nth-child(4) {
+  margin-right: 0px;
+}
+
+.main .container2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .container2 .element1 {
+  height: 30px;
+  margin-right: 10px;
+  border: solid 1px black;
+  flex-basis: calc(75% + 20px);
+  box-sizing: border-box;
+}
+
+.main .container2 .element2 {
+  height: 30px;
+  border: solid 1px black;
+  flex-basis: 25%;
+  box-sizing: border-box;
+}
+
+.main .container3 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .container3 .element1 {
+  margin-right: 10px;
+  height: 30px;
+  border: solid 1px black;
+  flex-basis: 25%;
+  box-sizing: border-box;
+}
+
+.main .container3 .element2 {
+  height: 30px;
+  border: solid 1px black;
+  flex-basis: calc(75% + 20px);
+  box-sizing: border-box;
+}
+
+.main .container4 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .container4 .element {
+  margin-right: 10px;
+  height: 30px;
+  border: solid 1px black;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.main .container4 .element:last-child {
+  margin-right: 0px;
+}
+
+.main .container5 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .container5 .element {
+  margin-right: 10px;
+  height: 30px;
+  border: solid 1px black;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.main .container5 .element:last-child {
+  margin-right: 0px;
+}
