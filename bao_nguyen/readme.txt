@@ -10,4 +10,4 @@ vấn đề 2 :
     rồi tiếp tục học back-end ( kế hoạch dài hạn trong 5 năm )
 vấn đề 3 :
     hi hi em không có ý kiến tại anh dạy khá kĩ và khá chậm  
-         
+         asd
