@@ -1,4 +1,4 @@
-var soNhapVao = prompt('nhap so can nhap');
+var soNhapVao = +prompt('nhap so can nhap');
 // tinh so gia thua 
 
 function giaThua(a){
@@ -15,14 +15,13 @@ console.log('--------------------------------------------------------')
 // so nhap vao co phai so hoan hao ko 
 
 function soHoanHao(a){
-    let tong=0;
+    let tong = 0;
     for( let i=1 ; i <a ; i++){
         if(a % i == 0){
             tong = tong +i;
         }
-    }
-  
-    if(tong ==  a){
+    }  
+    if(tong ===  a){
         return true;
     }else{
         return false;
@@ -42,7 +41,7 @@ function nguyenTo (a){
     if(a<=2){
         kt = true ;
     }
-    for(let i=3 ; i<a ; i++){
+    for(let i=2 ; i<a ; i++){
         if(a % i == 0){
             kt = false;
             break
