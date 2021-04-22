@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <!-- đặt js trong thẻ body và dưới cùng tắt cả các thẻ html -->
+    <!-- internal -->
+    <script>
+      // globla
+      // var
+      // tạo biến bằng từ khóa var
+      // var user = 'Binh';
+      // tạo bieens bằng từ khóa let
+      //=> tức đã khởi tạo biến nhưng chưa có giá trị
+      // const
+      const PI = 3.14;
+      var user =  'html';
+
+      //block scope
+    //   if (true) {
+    //     var user = "React";
+    //     let age = 30;
+    //   }
+
+      // block scope
+      // function scope
+      // hoisting
+
+      function showName() {
+        var firstName = "Javascript";
+      }
+
+      showName();
+      // console.log(firstname);
+      console.log(user); //=> not define tức là chưa khai báo biến or biến đó chưa tồn tại
+      // console.log(age);
+
+      // var user = 'Binh'
+      // let age = 20;
+
+      //Quy tắc đặt biến
+      // tránh đặt biến là 1 chữ name
+      // viết tên biến theo kiểu lạc đà
+
+
+        console.log( typeof (+'1')) 
+    //   điều kiện rẽ nhánh
+    // if else
+    // switch case
+
+
+    // if(user === 'react') {
+    //     alert('Xin chào bạn React');
+    // } else if(user === 'html') {
+    //     alert('Xin chào các bạn lớp html');
+    // } else {
+    //     alert('Xin chào các bạn khác lớp');
+    // }
+
+    // switch(user) {
+    //     case 'react':
+    //         alert('Xin chào bạn React');
+    //         break;
+    //     case 'html': 
+    //         alert('Xin chào các bạn lớp html');
+    //         break;
+    //     case 'css': 
+    //         alert('Xin chào các bạn lớp css');
+    //         break;
+    //     case 'node': 
+    //         alert('Xin chào các bạn lớp css');
+    //         break;
+    //     case 'native': 
+    //         alert('Xin chào các bạn lớp css');
+    //         break;
+    //     default: 
+    //         alert('Xin chào các bạn khác lớp');
+    //         break;
+    // }
+
+    // tạo 4 biến chứa chiều cao và cân nặng của Minh và Toàn
+    // tính chỉ sô BMI và so sánh chỉ số BMI của toàn với Minh
+    // nếu Minh lớn hơn toàn thì alert ra "BMI của Minh lơn hơn BMI của toán"
+    // nếu Toàn lớn hơn MInh thì alert ra "BMI của Toàn lơn hơn BMI của Minh"
+    // BMI của Toàn bằng BMI của Minh
+    // CT  cân nặng/ chiều cao ** 2
+        // var chieuCaoToan = 1.75;
+        // var canNangToan = 90;
+        // var chieuCaoMinh = 1.75;
+        // var canNangMinh = 90;
+
+        // var bmiToan = canNangToan / chieuCaoToan **2;
+        // var bmiMinh = canNangMinh / chieuCaoMinh **2;
+
+        // if(bmiToan > bmiMinh) {
+        //     console.log('Bmi của Toàn lớn hơn Bmi của Minh');
+        // } else if (bmiToan < bmiMinh) {
+        //     console.log('Bmi của Minh lớn hơn Bmi của Toàn');
+        // } else {
+        //     console.log('Bmi của Minh bằng Bmi của Toàn');
+        // }
+        // let height;
+        // console.log(0 || 100 || 1);
+        // console.log(height ?? 100);
+
+
+        // for dùng khi các bạn đã biết hoặc xác định được số lần lặp
+        let number = 10;
+        for(let i = 1; i <= 10; i++ ) {
+            if(i % 2 === 0) {
+                console.log(i);
+            }
+        }
+
+        // while dùng khi ko biết trước được sô lần lặp
+        // Cho người dùng nhập vào 1 số, nếu số đó nhỏ hơn 100 thì yêu cầu người 
+        // dùng nhập lại cho tới khi người nhập được sô lớn hơn 100
+        // while
+        // var so = prompt('Nhập vào 1 số lơn hơn 100');
+        while(prompt('Nhập vào 1 số lơn hơn 100') < 101) {
+           prompt('Nhập vào 1 số lơn hơn 100');
+        }
+
+
+        // Hàm trong javasscript
+        // sử dụng từ khóa function
+        function showId(userName, age) {
+            console.log('Xin chào ', userName)
+            console.log('Tôi năm nay ', age, 'tuổi' );
+        }
+
+        // cách 2
+        const showAge = function() {
+            console.log('Tôi là hàm không tên');
+        }
+
+
+        function tinhToan(so1, so2) {
+            return so1 + so2
+        }
+
+        var result = tinhToan(1, 2)
+        console.log(result)
+        console.log(tinhToan(1,2))
+        
+        // showAge()
+        // showId('Phương', 20)
+
+
+
+
+    </script>
+    <!-- ex -->
+    <script src="./myScript.js"></script>
+  </body>
+</html>
