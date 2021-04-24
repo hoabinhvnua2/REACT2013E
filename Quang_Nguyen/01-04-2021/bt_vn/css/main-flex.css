@@ -15,11 +15,11 @@
 }
 
 .container .logo {
-  flex: 30%;
+  flex: 3;
   color: white;
 }
 .container .menu {
-  flex: 70%;
+  flex: 7;
   display: flex;
   justify-content: flex-end;
 }
@@ -64,6 +64,7 @@
 .about-us .container .left-flex h2::before,
 .right-flex-1 h2::before {
   content:"";
+  display: block;
   width: 30px;
   height: 3px;
   left: 0;
@@ -96,7 +97,7 @@
 }
 .left-flex-1,
 .right-flex-1 {
-  flex: 50%;
+  flex: 1;
   height: 400px;
   background-repeat: no-repeat;
   background-size: 100% 400px;
@@ -106,21 +107,41 @@
 }
 .right-flex-1 {
   background-image: url("../img/Communication.jpg");
+  padding-left: 10px;
+  padding-top: 30px;
 }
 .right-flex-1 h2,
 .right-flex-1 h3,
 .right-flex-1 p {
   color: white;
 }
+
+.right-flex-1 h2 {
+  right: 37%;
+  position: absolute;
+}
+
 .right-flex-1 h2::before {
   background-color: white;
 }
+
+.right-flex-1 .topic-1 {
+  margin-top: 40px;
+}
+/* custom-blog */
 .custom-block {
+  padding-left: 40px;
+  padding-bottom: 25px;
+  margin-left: 20px;
   display: flex;
+  position: relative;
 }
 .custom-block img {
-  width: 60px;
+  width: 40px;
   height: 40px;
+  left: -50px;
+  position: absolute;
+  border-radius: 50%;
 }
 
 /* Responsive */
@@ -134,7 +155,13 @@
   .about-us .container .left-flex,
   .about-us .container .right-flex,
   .left-flex-1,
-  .right-flex-1 {
-    flex:100%;
+  .right-flex-1,
+   {
+    flex:1;
+    width: 100%;
+  }
+
+  .right-flex-1 h2{
+    right: 20%;
   }
 }
