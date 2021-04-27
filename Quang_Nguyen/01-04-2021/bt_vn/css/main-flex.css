@@ -1,0 +1,167 @@
+* {padding:0;margin:0;}
+/* Header */
+.header {
+  width: 100%;
+  background-color: #2172d3;
+}
+
+.container {
+  max-width: 970px;
+  min-height: 60px;
+  margin: auto;
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.container .logo {
+  flex: 3;
+  color: white;
+}
+.container .menu {
+  flex: 7;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .menu a {
+  color: white;
+  text-decoration: none;
+  border-left: 1px solid white;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.container .menu a:first-child {
+  border-left: none;
+}
+/* slider */
+.slider,
+.slider img,
+.about-us {
+  width: 100%;
+}
+/* margin padding flex */
+.mg-bottom {
+  margin-bottom: 20px;
+}
+.p-flex {
+  padding: 20px 12px;
+}
+
+/* about-us */
+.about-us .container .left-flex {
+  flex: 45%;
+  align-self: start;
+}
+.about-us .container .left-flex h2,
+.right-flex-1 h2 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.about-us .container .left-flex h2::before,
+.right-flex-1 h2::before {
+  content:"";
+  display: block;
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: rgb(60, 142, 209);
+}
+
+.about-us .container .left-flex div {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.about-us .container .left-flex p {
+  font-size: 13px;
+}
+
+.about-us .container .right-flex {
+  flex: 45%;
+}
+.about-us .container .right-flex img {
+  width: 100%;
+}
+
+/* our business */
+.our-business {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.left-flex-1,
+.right-flex-1 {
+  flex: 1;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
+}
+.left-flex-1 {
+  background-image: url("../img/Education2.jpg");
+}
+.right-flex-1 {
+  background-image: url("../img/Communication.jpg");
+  padding-left: 10px;
+  padding-top: 30px;
+}
+.right-flex-1 h2,
+.right-flex-1 h3,
+.right-flex-1 p {
+  color: white;
+}
+
+.right-flex-1 h2 {
+  right: 37%;
+  position: absolute;
+}
+
+.right-flex-1 h2::before {
+  background-color: white;
+}
+
+.right-flex-1 .topic-1 {
+  margin-top: 40px;
+}
+/* custom-blog */
+.custom-block {
+  padding-left: 40px;
+  padding-bottom: 25px;
+  margin-left: 20px;
+  display: flex;
+  position: relative;
+}
+.custom-block img {
+  width: 40px;
+  height: 40px;
+  left: -50px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .container,
+  .container .menu {
+    flex-direction: column;
+  }
+  .container .menu,
+  .container .logo,
+  .about-us .container .left-flex,
+  .about-us .container .right-flex,
+  .left-flex-1,
+  .right-flex-1
+   {
+    flex:1;
+    width: 100%;
+  }
+
+  .right-flex-1 h2{
+    right: 20%;
+  }
+}
