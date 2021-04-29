@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    font-family: Arial;
+}
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(67, 67, 182);
+    color: floralwhite;
+float: left;
+display: block;
+}
+.home{
+    color: gold;
+}

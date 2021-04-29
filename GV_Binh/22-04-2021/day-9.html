@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = "xin chào các bạn lớp react!";
+      // '' hoặc ""
+      console.log(number.length);
+      console.log(number[23]);
+      console.log(number.toLocaleLowerCase());
+      console.log(number.indexOf("c"));
+      // kho trả về true/flase mà nó trả về -1 neeui ko tìm thấy hoặc trả về vị tri (index) của từ đó trong chuỗi và
+      // nó sẽ trả về vị trí của phần từ đầu tiên mà nó tìm thấy
+      console.log(number.indexOf("k"));
+      console.log(number.lastIndexOf("k"));
+      // const result = number.split(' ');
+      const result = number.replace(" ", "-");
+      // console.log('a' + number.trim() + 'b')
+      var str1 = "The morning is upon us.";
+      var str2 = str1.slice(4, -2);
+
+      console.log("str1", str1.length);
+      console.log(str2);
+      const baiTap =
+        "    Javascript là ngôn ngữ kịch bản, không phải ngôn ngữ hướng đối tượng     ";
+      // 1. bỏ khoảng trằng đầu và cuối chuỗi
+      // 2. hiển thị chuổi thành chữ in hoa
+      // 3. nếu độ dài của chuỗi lớn hơn 50 thì sâu ra màn hình "chuỗi ký tự quá dài"
+      // 4. tìm trong chuỗi có chữ 'phải' ko? nếu có show ra vị trí của từ đó
+
+      // mảng trong js là 1 object
+      // khai báo mảng sử dụng từ khóa new và hàm tạo(contructor)
+      // hoặc sử dụng cặp ngoặc []
+      // let arr2 = new Array(1, 2, 3, 'hoa', 'react')
+      // let arr2 = ['quang', 'hue', [1, 2, 3]]
+      // let arrLength = arr1.length;
+      // for (let index = 0; index < arrLength; index++) {
+      //     console.log(arr1[index])
+      // }
+      // index = 0 ,  0 < (tìm arrLength 5 ); tăng index lên 1
+      // index = 1 ,  1 < (tìm arr1, sau đó đếm sô phần tử của arr1); tăng index
+      // index = 0 ,  0 < (tìm arr1, sau đó đếm sô phần tử của arr1); tăng index
+
+      // for of khác vs for thường, for ko sử dụng index, chỉ nên sử dụng for of cho array
+      // for (const item of arr1) {
+      //     console.log(item)
+      // }
+
+      // hiển thị ra 1 mảng chứa các số chẵn từ mảng đã cho
+
+    //   let res = [];
+    //   for (const item of arr1) {
+    //     if (item % 2 === 0) {
+    //       res.push(item);
+    //     }
+    //   }
+    //   arr1.shift();
+    //   arr1.unshift(0);
+    //   console.log(arr1);
+
+      // ví dụ
+      let arr1 = [3, 2, 6, 3, 5, 6, 7, 3, 9, 5];
+      // 1. hiển thị ra 1 mảng chứa các số lớn 5 
+    //   let arrOne = arr1.map(function() {
+
+    //   })
+
+      // let arrOne = arr1.map((item, index) => {
+      //   if (index % 2 === 0) return item
+      // })
+      
+      let arrOne =  arr1.filter((item, index) => {
+        if(item > 5) return item
+      })
+      console.log(arrOne)
+      // 2. tạo 1 mảng mới bằng mảng đã cho nhân 2
+      let arrTow = arr1.map(item => item * 2)
+      console.log('arrTow', arrTow)
+
+      // 3. gộp mảng đã cho và mảng mới sau khi nhân 2 lại với nhau
+        let arrThree = arr1.concat(arrTow);
+        console.log('arrThree', arrThree);
+      // 4. hiển thị ra nhưng phần tử nhở hơn 5 trong mảng đã cho
+      // 5. tính tổng các phần tử trong mảng
+        let arr5 = arr1.reduce((acc, item, index) => {
+          acc += item
+          return acc
+        }, 5)
+        console.log(arr5)
+
+      // acc = 0 nếu có initialValue
+
+      // 6. viết 1 function có tham số truyền vào, hãy kiểm tra xem tham số truyền vào đó có phải mảng hay ko.
+      // nếu là mảng thì thực hiện đảo mảng và thêm số 0 vào đầu mảng và thêm số 1 vào cuối mảng sau đó thực hiện
+      // tính tổng các phần tử của mảng
+
+
+
+    </script>
+  </body>
+</html>
