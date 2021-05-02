@@ -46,9 +46,8 @@ body {
 }
 
 /* About */
-.about {
+.about, .news, .contacts, .footer {
   padding: 20px 270px;
-  height: 60px;
 }
 .about .a-left {
   width: 50%;
@@ -56,9 +55,22 @@ body {
   float: left;
 }
 .about .a-left h3 {
-  font-size: 12px;
-  padding-bottom: 15px;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
 }
+.about .a-left h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: rgb(60, 142, 209);
+}
+
 .about .a-left div {
   font-weight: bold;
   font-size: 20px;
@@ -72,15 +84,260 @@ body {
   width: 50%;
   float: left;
 }
+
 .about .a-image img {
   width: 100%;
-  padding-bottom: 50px;
 }
-.about::after {
-  content: "";
+
+/* Phần service */
+.services {
+  width: 100%;
+  height: 485px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.services .s-left {
+  width: 50%;
+  float:left;
+}
+.services .s-left img{
+  width: 100%;
+  height: 485px;
+}
+
+.services .s-right {
+  width: 50%;
+  float: right;
+}
+
+.services .s-right h3 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.services .s-right h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: white;
+}
+
+.right-text-image {
+  position:absolute;
+  top: 15%;
+  left: 48%;
+  width: 700px;
+}
+.right-text-image .title {
+  padding-left: 5%;
+}
+.right-text-image .img-in-text1,
+.right-text-image .img-in-text2 {
+  width: 30%;
+  float: left;
+}
+.right-text-image .title-1 {
+  width: 70%;
+  float: right;
+}
+.right-text-image .title-2 {
+  width: 70%;
+  float: left;
+}
+
+.right-text-image .title-1 h3,.right-text-image .title-2 h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.right-text-image img {
+  border-radius: 30px;
+}
+
+.text-white {
+  color: white;
+}
+
+.clear {
   clear: both;
 }
 
-.services {
+.news {
   width: 100%;
+}
+
+.news h3 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.news h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: blue;
+}
+.news p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.news .latest-news {
+  float:left;
+  width: 30%;
+  border: 1px solid gray;
+  margin-right: 30px;
+  display: block;
+}
+
+.news .latest-news div {
+ padding: 10px; 
+}
+
+.news .latest-news img {
+  width: 100%;
+  height: 180px;
+}
+
+.news .latest-news div>h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.news .latest-news div>a {
+  padding-top: 10px;
+  font-size: 12px;
+  display: block;
+}
+.news .latest-news div a {
+  text-decoration: none;
+}
+.news .latest-news div p {
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 10px 10px 0 0;
+}
+
+
+.contacts {
+  width: 100%;
+  margin-top: 70px;
+}
+.contacts .c-left,
+.contacts img {
+  float:left;
+  width: 50%;
+  padding-left: 5%;
+}
+.contacts .c-left strong {
+  display: block;
+}
+.contacts .c-left input {
+  width: 30%;
+  display: block;
+  float: left;
+  margin: 12px 12px 12px 0;
+  padding: 6px;
+}
+
+.contacts .c-left h3 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.contacts .c-left h3::before {
+  content:"";
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 60%;
+  position: absolute;
+  background: blue;
+}
+.contacts .c-left textarea {
+  width: 100%;
+}
+
+.contacts>input {
+  margin-top: 2%;
+  padding: 10px 20px;
+  color: #fff;
+  background-color:rgb(236, 160, 18);
+  margin-left:50%;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background:black;
+  color: white;
+}
+
+.footer .f-column {
+  width: 25%;
+  float:left;
+  font-size: 12px;
+  padding: 15px
+}
+.footer .f-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.footer .f-column p {
+  font-weight: lighter;
+}
+.footer .f-column ul {
+
+}
+.footer .f-column ul li {
+  list-style: none;
+}
+.footer .f-column ul li::before {
+  content: "\003e \2002";
+}
+.footer .f-column ul li a {
+  text-decoration: none;
+  color: white;
+}
+.footer .f-column ul li a:hover {
+  color:rgb(236, 160, 18);
+}
+.footer .f-column input[type=text] {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: black;
+  padding: 3px;
+  width: 70%;
+}
+.footer .f-column button {
+  padding: 3px;
+}
+
+.copyright {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #fff;
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-left: 50%;
+}
+.copyright p {
+  margin-bottom: 200px;
 }
