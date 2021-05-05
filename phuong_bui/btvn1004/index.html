@@ -10,6 +10,7 @@
     
 </body>
 <script>
+    /*
     //Bai 1: Su dung vong lap for de xuat ra cac so chan tu 2 den 10
     for(var i = 0; i <= 10; i++){
         if(i % 2 == 0){
@@ -81,5 +82,148 @@
     }
 
     checkNgTo();
+   
+    //Bai 1: cho mang
+    let arr1 = [1,2,3,4,5,6,7,8,9,10];
+    //Hien thi ra 1 mang cac chu so lon hon 5
+    let mang1 = [];
+    for(let item of arr1){
+        if(item > 5){
+            mang1.push(item);
+        }
+    }
+     //Khong nen dung map vi map tra ve mang voi so luong phần tử đúng bằng số lượng phần tử mảng ban đầu
+    let arrOne = arr1.map((item, index) => {
+        if(item > 5)return item;
+        return false;
+    })
+    console.log(mang1);
+    //Mang moi bang mang da cho nhan 2
+    let mang2 = [];
+    for(let item of arr1){
+        mang2.push(item * 2);
+    }
+    console.log("Mang thu hai: " + mang2);
+
+    let arrNhanHai = arr1.map(item => item * 2);
+    console.log(arrNhanHai);
+    //Gop mang da cho vao mang moi sau khi nhan 2 lai voi nhau
+    let mang3 = [];
+    mang3 = mang1.concat(mang2);
+    console.log("Mang thu ba: "+mang3);
+
+    //Hien thi ra nhung phan tu nho hon 5 trong mang da cho
+    let mang4 = [];
+    for(let item of arr1){
+        if(item < 5){
+            mang4.push(item);
+        }
+    }
+    console.log(mang4);
+
+    //Tinh tong cac phan tu trong mang
+    let S = 0;
+    for(let item of arr1){
+        S += item;
+    }
+    console.log(" S = "+S);
+
+    //Cach 2
+    let Tong = arra.reduce((sum, item, index) => {
+        acc += item;
+        return sum;
+    }, 0);
+    //Viet mot function co tham so truyen vao, hay kiem tra xem tham so truyen vao do co phai mang hay khong
+    function ktArray(array1){
+          var giatri = prompt("Nhap vao mot gia tri");
+          var mang = giatri.split();
+          console.log(mang);
+          if(Array.isArray(mang)){
+              alert("Tham so truyen vao do la mot mang");
+              mang.reserve();
+              mang.unshift("0");
+              mang.push("1");
+              console.log(giatri);
+          }else alert("Tham so truyen vao khong phai mot mang");
+    }
+    ktArray();
+ */
+       //bai tap
+       const data = [
+           {
+               id: 1,
+               firstName : 'React',
+               age: 20,
+               lastName: 'Js',
+           },
+           {
+               id: 2,
+               firstName : 'React',
+               age: 15,
+               lastName: 'JS',
+           },
+           {
+               id: 3,
+               firstName : 'HTML',
+               age: 26,
+               lastName: 'css',
+           },
+           {
+               id: 4,
+               firstName : 'Python',
+               age: 20,
+               lastName: 'Mongo',
+           },
+           {
+               id: 5,
+               firstName : 'Node',
+               age: 13,
+               lastName: 'js',
+           },
+       ];
+       //Tao ra mot object nhu sau
+      /* var obj2 = {
+          le: {
+            name: "le",
+           children: [] //chua tat ca nhung object co tuoi la le
+           },
+           chan: {
+               name: "chan",
+               children: [] //chua tat ca nhung object co tuoi la chan
+           }
+       }
+
+       let mangChan = obj2.chan["children"];
+       let mangLe = obj2.le["children"];
+       data.forEach(item => {
+           if(item.age % 2 === 0){
+               mangChan.push(item);    
+           }else if(item.age % 2 !== 0){
+               mangLe.push(item);
+           }
+       });
+       console.log(mangChan);
+       console.log(mangLe);
+       console.log(obj2);
+*/
+       //Cach 2
+       let obj2 = data.reduce((acc, item, index) => {
+           if(item.age % 2 === 0){
+               acc.chan.children.push(item);
+           }else acc.le.children.push(item);
+           return acc;
+       },
+       {
+           le: {
+               name: "le",
+               children: []
+           },
+           chan: {
+               name: "chan",
+               children: []
+           }
+       });
+       console.log(obj2);
+       
 </script>
 </html>
