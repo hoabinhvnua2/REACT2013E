@@ -108,4 +108,4 @@ for (let i = 0; i < 30; i++) {
     }
 }
 console.log(obj1);
-console.log('các bạn có điểm 7 là '+ sum+' người');
+console.log('các bạn có điểm 5 là '+ sum+' người');
