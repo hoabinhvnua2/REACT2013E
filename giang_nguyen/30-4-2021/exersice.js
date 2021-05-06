@@ -98,7 +98,7 @@ diemnhohon5.push(
     }
 )
 console.log(diemnhohon5);
-//bài 4
+//bài 5
 obj1 = [];
 let sum = 0;
 for (let i = 0; i < 30; i++) {
