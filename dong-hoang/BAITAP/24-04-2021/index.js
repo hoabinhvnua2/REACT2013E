@@ -101,7 +101,7 @@ function groupBy2(objectArray, property) {
       let newObj = {};
       newObj.fullName = obj.lastName + ' ' + obj.firstName;
       newObj.point = obj.point;
-      if (obj.point > 5) {
+      if (obj.point < 5) {
       acc[key].push(newObj) }
       return acc
     }, {})
