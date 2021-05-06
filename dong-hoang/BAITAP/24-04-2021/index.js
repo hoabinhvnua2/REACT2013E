@@ -77,13 +77,17 @@ function groupBy1(objectArray, property) {
       if (!acc[key]) {
         acc[key] = []
       }
-      if (obj.point > 7) {
-      acc[key].push(obj) }
+      let newObj = {};
+      newObj.fullName = obj.lastName + ' ' + obj.firstName;
+      newObj.point = obj.point;
+      if (newObj.point > 7) {
+      acc[key].push(newObj) }
       return acc
     }, {})
   }
   
   let groupedClass1 = groupBy1(myArr, 'class');
+
   console.log("Các bạn có điểm lớn hơn 7 theo từng lớp:" ,groupedClass1)
 
 //-----------------------
@@ -94,8 +98,11 @@ function groupBy2(objectArray, property) {
       if (!acc[key]) {
         acc[key] = []
       }
+      let newObj = {};
+      newObj.fullName = obj.lastName + ' ' + obj.firstName;
+      newObj.point = obj.point;
       if (obj.point > 5) {
-      acc[key].push(obj) }
+      acc[key].push(newObj) }
       return acc
     }, {})
   }
