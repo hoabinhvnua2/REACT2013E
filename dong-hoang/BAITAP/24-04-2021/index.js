@@ -41,15 +41,15 @@ const x = firstName.length;
 const y = lastName.length;
 const z = myClasses.length;
 
-var initialArr = [{
+let initialArr = [{
   id: 0,
   firstName: '',
   lastName: '',
   class: '',
   point: 0,
 }];
-initialArr = initialArr.reduce((a,i) => a.concat(Array(30).fill(i)),[])
-var myArr = [];
+initialArr = initialArr.reduce((a,i) => a.concat(Array(31).fill(i)),[])
+let myArr = [];
 initialArr.reduce(function(ac,obj,index) {
   let acc = {};
     acc['id'] = index;
@@ -113,7 +113,7 @@ function groupBy3(objectArray, property) {
       return acc;
     }, {})
   }
-  
+
   let total = groupBy3(myArr, 'class');
   console.log("Tổng các bạn có điểm 7:",sum)
 
