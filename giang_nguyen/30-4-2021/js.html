@@ -10,6 +10,26 @@
 
 <body>
     <script src="exersice.js"></script>
+    <script>
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+        //const result = words.filter(word => word.length > 6);
+        const result = words.filter(function (word) {
+            return word.length > 6;
+        });
+        console.log(result);
+        // expected output: Array ["exuberant", "destruction", "present"]
+        let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+        function filterItems(arr, query) {
+            return arr.filter(function (el) {
+                return el.indexOf(query) !== -1
+            })
+        }
+
+        console.log(filterItems(fruits, 'app'))  // ['apple', 'grapes']
+        const a = 'j'.indexOf('h');
+        console.log(a);
+    </script>
 </body>
 
 </html>

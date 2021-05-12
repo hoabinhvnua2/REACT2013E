@@ -58,6 +58,7 @@ diemlonhon7.push(
     }
 )
 console.log(diemlonhon7);
+
 //bài 3
 obj1 = [];
 for (let i = 0; i < 30; i++) {
