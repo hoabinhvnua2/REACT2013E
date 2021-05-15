@@ -37,36 +37,29 @@ const lastName = ['Trần', 'Nguyễn', 'Mai', 'Tạ', 'Nhữ', 'Đặng', 'Thá
 const myClasses = ['10A','10B','10C'];
 
 const randomCreate = (a) => (Math.floor(Math.random()*a));
-var defaultObj = {
-    id: 0,
-    firstName: '',
-    lastName: '',
-    class: '',
-    point: 0,
-};
 const x = firstName.length;
 const y = lastName.length;
 const z = myClasses.length;
 
-var initialArr = [defaultObj];
-initialArr = initialArr.reduce((a,i) => a.concat(Array(30).fill(i)),[])
-var myArr = [];
-initialArr.reduce(function(acc,obj,index) {
-    let myObj = {
-        id: 0,
-        firstName: '',
-        lastName: '',
-        class: '',
-        point: 0,
-    };
-    myObj.id = index;
-    myObj.firstName = firstName[randomCreate(x)];
-    myObj.lastName = lastName[randomCreate(y)];
-    myObj.class = myClasses[randomCreate(z)];
-    myObj.point = randomCreate(10);
-    myArr.push(myObj);
+let initialArr = [{
+  id: 0,
+  firstName: '',
+  lastName: '',
+  class: '',
+  point: 0,
+}];
+initialArr = initialArr.reduce((a,i) => a.concat(Array(31).fill(i)),[])
+let myArr = [];
+initialArr.reduce(function(ac,obj,index) {
+  let acc = {};
+    acc['id'] = index;
+    acc['firstName'] = firstName[randomCreate(x)];
+    acc['lastName'] = lastName[randomCreate(y)];
+    acc['class'] = myClasses[randomCreate(z)];
+    acc['point'] = randomCreate(10);
+    myArr.push(acc);
     return 
-},[])
+})
 console.log("Mảng được tạo:", myArr);
 
 //---------------------
@@ -115,17 +108,12 @@ function groupBy2(objectArray, property) {
 let sum = 0;
 function groupBy3(objectArray, property) {
     return myArr.reduce(function (acc, obj) {
-      let key = obj.class;
-      if (!acc[key]) {
-        acc[key] = []
-      }
       if (obj.point == 7) {
-      acc[key].push(obj) 
-    sum = sum+1;}
+        sum = sum+1;}
       return acc;
     }, {})
   }
-  
+
   let total = groupBy3(myArr, 'class');
   console.log("Tổng các bạn có điểm 7:",sum)
 
