@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // const a = {
+        //     name: 'a',
+        //     age: 'b'
+        // }
+
+        // const b = {
+        //     name: 'c',
+        //     age: 'd',
+        //     gender: 'Nam'
+        // }
+        // const c = {
+        //     name: 'e',
+        //     age: 'f',
+        //     gender: 'Nam'
+        // }
+
+        // console.log(Object.assign(a, b, c))
+
+        const user = {
+            name: 'react',
+            showName: function() {
+                return this.name;
+            },
+            student: {
+                cla : '10a',
+                showClass: function() {
+                    return this.cla + this.name
+                }
+            }
+        }
+
+        console.log(user.student.showClass())
+        // const a = user.showName;
+        // const b = a.bind(user)
+        // console.log(b())
+        // hamf contructor
+        const SinhVien = function(c, d) {
+            this.x = c;
+            this.y = 'b';
+        }
+        SinhVien.prototype.sayHello = function() {}
+
+        // const SinhVien = new CreateObject('a')
+        // SinhVien.__proto__.sayHi = function() {
+        //     console.log()
+        // }
+        console.log('sv', SinhVien)
+        const Car = {
+            lop: '',
+        }
+        console.log(Car)
+
+
+
+        class HocSinh {
+            constructor(y) {
+                this.x = 'a'
+            }
+            showName(params) {
+               return 'a'
+            }
+        }
+
+        const hs = new HocSinh()
+        console.log(hs)
+
+        // BT viết 1 hàm nhận vào 2 tham số x, v. thực hiện phép tính số mũ
+        // VD pow(2, 3) = 8 => 2^3 //Math
+
+        function pow(x, n) {
+            if(n == 0 ) return 1
+            if(n > 0) {
+                return x * pow(x, n-1)
+            }
+            // 2, 3 => 2 * 2 * 2  * 1
+        }
+
+        
+
+    </script>
+
+
+</body>
+</html>

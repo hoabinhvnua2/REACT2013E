@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Cho mảng firstName = ['Quang', 'Nam', 'Nhật', 'Minh', 'Ngọc', 'Lan', 'Bình', 'Sơn', 'Hương', 'Vinh', 'Phương', 'Xuân', 'Dương', 'Oanh', 'Cúc', 'Thu', 'Đạt', 'Trường', 'Tín']
+    cho mảng lastName = ['Trần', 'Nguyễn', 'Mai', 'Tạ', 'Nhữ', 'Đặng', 'Thái', 'Phạm', 'Đỗ', 'Vũ', 'Cao', 'Đinh', 'Hoàng']
+    dấu ... là các giá trị mà các bạn phải viết hàm random để tạo ra nó
+    1. Viết 1 fumction tạo ra một mảng data chứa 30 object bao gồm các key value như sau:
+	[{
+		id: 1,
+		firstName: 'Quang',
+		lastName: 'Nguyen',
+		class: '10A',
+		point: 6
+	}, ...] -->
+
+
+
+    <script>
+        var firstName = ['Quang', 'Nam', 'Nhật', 'Minh', 'Ngọc', 'Lan', 'Bình', 'Sơn', 'Hương', 'Vinh', 'Phương', 'Xuân', 'Dương', 'Oanh', 'Cúc', 'Thu', 'Đạt', 'Trường', 'Tín']
+        var lastName = ['Trần', 'Nguyễn', 'Mai', 'Tạ', 'Nhữ', 'Đặng', 'Thái', 'Phạm', 'Đỗ', 'Vũ', 'Cao', 'Đinh', 'Hoàng']
+        var lop = ['10A', '10B', '10C']
+            // câu 1
+        var arrObject = [];
+
+        function creatObject() {
+            let lengthFirstName = firstName.length;
+            let lengthLastName = lastName.length;
+            let lengthClass = lop.length;
+            for (let i = 0; i < 30; i++) {
+                arrObject.push({
+                    id: i,
+                    firstName: firstName[Math.floor(Math.random() * lengthFirstName)],
+                    lastName: lastName[Math.floor(Math.random() * lengthLastName)],
+                    class: lop[Math.floor(Math.random() * lengthClass)],
+                    point: Math.floor(Math.random() * 11)
+                })
+            }
+        }
+        creatObject();
+        console.log(arrObject);
+
+        //     2. Từ mảng C1 hãy tạo ra 1 object các bạn có điểm lớn hơn 7 theo từng lớp
+        // {
+        // 	class10A: [{fullName: firstName+lastName, ponit: 8}, ...],
+        // 	class10B: [{fullName: firstName+lastName, ponit: 8}, ...],
+        // 	...
+        // }
+        var objectClassPointBigger7 = {
+            class10A: [],
+            class10B: [],
+            class10C: []
+        }
+
+        var class10A = [];
+        var class10B = [];
+        var class10C = [];
+
+        function pointBigger7() {
+            for (let i = 0; i < 30; i++) {
+                if (arrObject[i].point > 7 && arrObject[i].class === '10A') {
+                    class10A.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                } else if (arrObject[i].point > 7 && arrObject[i].class === '10B') {
+                    class10B.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                } else if (arrObject[i].point > 7 && arrObject[i].class === '10C') {
+                    class10C.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                }
+            }
+        }
+        pointBigger7();
+        objectClassPointBigger7.class10A = class10A;
+        objectClassPointBigger7.class10B = class10B;
+        objectClassPointBigger7.class10C = class10C;
+        console.log(objectClassPointBigger7);
+
+        //     3. Từ mảng C1 hãy tạo ra 1 object các bạn có điểm nhỏ hơn 5 theo từng lớp
+        // {
+        // 	class10A: [{fullName: firstName+lastName, ponit: 4}, ...],
+        // 	class10B: [{fullName: firstName+lastName, ponit: 3}, ...],
+        // 	...
+        // }
+        var objectClassPointLess5 = {
+            class10A: [],
+            class10B: [],
+            class10C: []
+        }
+
+        var class10A = [];
+        var class10B = [];
+        var class10C = [];
+
+        function pointLess5() {
+            for (let i = 0; i < 30; i++) {
+                if (arrObject[i].point < 5 && arrObject[i].class === '10A') {
+                    class10A.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                } else if (arrObject[i].point < 5 && arrObject[i].class === '10B') {
+                    class10B.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                } else if (arrObject[i].point < 5 && arrObject[i].class === '10C') {
+                    class10C.push({
+                        fullName: `${arrObject[i].firstName} ${arrObject[i].lastName}`,
+                        point: arrObject[i].point
+                    })
+                }
+            }
+        }
+        pointLess5();
+        objectClassPointLess5.class10A = class10A;
+        objectClassPointLess5.class10B = class10B;
+        objectClassPointLess5.class10C = class10C;
+        console.log(objectClassPointLess5);
+
+        // 5. Tính tổng số các bạn có điểm 7 của tất cấc lớp
+        function pointEqual7() {
+            let sum = 0;
+            for (let i = 0; i < 30; i++) {
+                if (arrObject[i].point == 7)
+                    sum++
+            }
+            return sum;
+        }
+        console.log('so nguoi co diem bang 7 :' + pointEqual7());
+    </script>
+
+</body>
+
+
+
+
+</html>
