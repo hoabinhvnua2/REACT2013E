@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyle.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div id=main>
+        <div id=form-signup>
+            <h2>REACT2013E</h2>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input id="firstname" name="firstname" type="text" placeholder="ex:Tran Hung"/>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input id="lastname" name="lastname" type="text" placeholder="ex:Anh"/>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input id="username" name="username" type="text" placeholder="ex:tranhunganh2309"/>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="ex:tranhunganh197@gmail.com"/>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder=""/>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input id="confirmpassword" name="confirmpassword" type="password" placeholder=""/>
+                <span class="form-message"></span>
+            </div>
+            <div id="gender" class="form-group-gender">
+                <p>Gender</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <span class="form-message-gender"></span>
+            <button>Đăng Ký</button>
+        </div>
+    </div>
+    <script src="validator.js"></script>
+    <script>
+        Validation({
+            form:'#form-signup',
+            formMessage:'.form-message',
+            handlers: [
+                Validation.isRequired('#firstname','Bạn chưa nhập trường này'),
+                Validation.isRequired('#lastname','Bạn chưa nhập trường này'),
+                Validation.isRequired('#username','Bạn chưa nhập trường này'),
+                Validation.isRequired('#email','Bạn chưa nhập trường này'),
+                Validation.isEmail('#email','Đây không phải là email, mời nhập lại'),
+                Validation.isRequired('#password','Bạn chưa nhập trường này'),
+                Validation.isPassword('#password',6,'Mật khẩu phải có ít nhất 6 kí tự'),
+                Validation.isRequired('#confirmpassword','Bạn chưa nhập trường này'),
+                Validation.isPasswordRight('#confirmpassword',() => {
+                    return document.querySelector('#form-signup #password').value;
+                },6,'Mật khẩu phải có ít nhất 6 kí tự'),
+                Validation.isConfirmPassword('#confirmpassword',() => {
+                    return document.querySelector('#form-signup #password').value
+                },'Nhập lại mật khẩu sai, mời nhập lại'),   
+            ]
+        });
+    </script>
+</body>
+</html>
