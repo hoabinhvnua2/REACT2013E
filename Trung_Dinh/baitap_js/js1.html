@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js1.css">
+</head>
+<body>
+    <form>
+        <!--  -->
+        <div>
+            <label> First name</label>
+            <input type="text"   required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> Last name</label>
+            <input type="text"  required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> User name</label>
+            <input type="text"  required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> Email</label>
+            <input type="emial"  required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> Password</label>
+            <input type="password"  id="password" required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> Confirm Password</label>
+            <input type="password"  id="confirm_pass"  required>
+        </div>
+        <span>Please provide a valid.</span>
+        <!--  -->
+        <div >
+            <label> Gender</label>
+            <select>
+                <option value="">nam</option>
+                <option value="">nữ</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn" type="submit" onclick="sub()">Sign Up</button>
+        </div>
+       
+    </form>
+    <script>
+        let x = document.getElementsByTagName('input');
+        let y = document.getElementsByTagName('span');
+        let pass = document.getElementById('password');
+        let confirmPass = document.getElementById('confirm_pass');
+        
+        let i;
+        function sub(){
+           for(i=0; i<x.length; i++){
+               for(i=0; i<y.length; i++){
+                    if(x[i].value == ''){
+                        x[i].style.borderColor = 'red';
+                        y[i].style.display ='block';
+                    }
+                }
+               if(pass.value != confirmPass.value){
+                    alert('password is incorrect');
+                }
+           }
+                
+        }
+    </script>
+</body>
+</html>
