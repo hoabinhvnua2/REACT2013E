@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Giá</th>
+            </tr>
+        </thead>
+        <tbody id="rowData">
+
+
+        </tbody>
+        <script>
+            const arrData = [{ "id": "1", "product_name": "Iphone", "quantity": "20", "price": "1000" }, { "id": "2", "product_name": "Iphone 1", "quantity": "20", "price": "1000" }, { "id": "3", "product_name": "Iphone 2", "quantity": "10", "price": "1200" }, { "id": "4", "product_name": "Iphone 3", "quantity": "15", "price": "500" }, { "id": "5", "product_name": "Iphone12", "quantity": "10", "price": "12000" }, { "id": "6", "product_name": "Iphone13", "quantity": "12", "price": "1000" }, { "id": "7", "product_name": "Iphone14", "quantity": "15", "price": "2000" }];
+
+            const rowData = document.getElementById('rowData');
+
+            function showData(data) {
+                let html = '';
+                for (let i = 0; i < data.length; i++) {
+                    const row = `<tr>
+                <td>${i + 1}</td>
+                <td>${data[i].product_name}</td>
+                <td>${data[i].quantity}</td>
+                <td>${data[i].price}</td>
+              </tr>`
+                    html += row
+                }
+                rowData.innerHTML = html
+            }
+
+            showData(arrData);
+        </script>
+</body>
+
+</html>

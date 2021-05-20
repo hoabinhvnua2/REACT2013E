@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .do {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    Nhập số a:<input type="number" id="num1">
+    Nhập số b:<input type="number" id="num2"><br>
+    <button class="" onclick="cong()">+</button>
+    <button class="" onclick="tru()">-</button>
+    <button onclick="nhan()">X</button>
+    <button onclick="chia()">/</button>
+    <button onclick="mu()">^</button>
+    <br>Kết quả:<input type="number" id="show">
+    <script>
+
+        $("button").click(function () {
+            $("button").removeClass("do");
+            $(this).addClass("do");
+        });
+        function cong() {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            document.getElementById("show").value = +a + +b;
+        }
+        function tru() {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+        }
+        function nhan() {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            document.getElementById("show").value = a * b;
+        }
+        function chia() {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            if (b !== 0) {
+                document.getElementById("show").value = a / b;
+            }
+        }
+        function mu() {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            document.getElementById("show").value = Math.pow(a, b);
+        }
+    </script>
+</body>
+
+</html>
