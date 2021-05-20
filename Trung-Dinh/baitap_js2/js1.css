@@ -1,0 +1,33 @@
+form{
+    width: 400px;
+    
+}
+input, select{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 5px;
+    /* border-radius: 5px; */
+    box-sizing: border-box;
+    outline: none;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+select{
+    width: 52%;
+}
+.btn{
+    margin-left: 50%;
+    background-color: khaki;
+}
+input:focus{
+    border-color: red;
+}
+span, p{
+    margin-left: 50%;
+    display: none;
+    color: red;
+}
