@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            color:blue;
+            font-size: 17px;
+        }
+        .btncolor {
+            background-color: gold;
+        }
+
+        input {
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        .btn {
+            margin: 5px 0;
+        }
+
+        span {
+            color: red;
+        }
+        .register-form:focus {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bài tập 1 -->
+    <div class="calculation">
+        <p class="title"> Bài tập 1:</p>
+        <input type="text" id="number1" value=""><br>
+        <input type="text" id="number2" value=""><br>
+        <div class="btn">
+            <button onclick="tinhToan('dauCong')" id="dauCong" class="reset-btn">+</button>
+            <button onclick="tinhToan('dauTru')" id="dauTru" class="reset-btn">-</button>
+            <button onclick="tinhToan('dauNhan')" id="dauNhan" class="reset-btn">*</button>
+            <button onclick="tinhToan('dauChia')" id="dauChia" class="reset-btn">/</button>
+            <button onclick="tinhToan('dauMu')" id="dauMu" class="reset-btn">^</button>
+        </div>
+        <div>The result is: <span id="result"></span></div>
+    </div>
+    <!-- Bài tập 2 -->
+    <form>
+        <p class="title"> Bài tập 2:</p>
+        <label>First name</label>
+        <input type="text" id="firstname" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>Last name</label>
+        <input type="text" id="lasttname" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>User name</label>
+        <input type="text" id="username" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>Email</label>
+        <input type="text" id="email" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>Password</label>
+        <input type="text" id="password" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>Confirm password</label>
+        <input type="text" id="cfr-password" value="" class="register-form">
+        <span class="notice"></span><br>
+
+        <label>Gender</label>
+        <select id="gender" class="register-form">
+            <option></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        <span class="notice"></span><br>
+        <button type="button" onclick="showErr()">Đăng ký</button>
+    </form>
+
+    <!-- Bài tập 3 -->
+    <div>
+        <p class="title"> Bài tập 3:</p>
+        <table id="listProduct" border="1">
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // Bài tập 1
+        function tinhToan(dau) {
+            let numberOne = document.getElementById('number1').value;
+            let numberTwo = document.getElementById('number2').value;
+            let result;
+            reset();
+            
+            document.getElementById(dau).classList.add("btncolor");
+            if (parseInt(numberOne).toString() !== "NaN" && parseInt(numberTwo).toString() !== "NaN") {
+                switch (dau) {
+                    case "dauCong":
+                        result = parseInt(numberOne) + parseInt(numberTwo);
+                        break;
+                    case "dauTru":
+                        result = numberOne - numberTwo;
+                        break;
+                    case "dauNhan":
+                        result = numberOne * numberTwo;
+                        break;
+                    case "dauChia":
+                        if (numberTwo !== 0) {
+                            result = numberOne / numberTwo;
+                        }
+                        break;
+                    case "dauMu":
+                        result = Math.pow(numberOne, numberTwo);
+                        break;
+                }
+                document.getElementById('result').innerText = result;
+
+            } else { document.getElementById('result').innerText = "Vui lòng nhập đủ số ở 2 ô trên"; }
+
+        }
+        function reset() {
+            let arrbtn = document.getElementsByClassName("reset-btn")
+            for (i = 0; i < arrbtn.length; i++) {
+                arrbtn[i].classList.remove("btncolor");
+            }
+        }
+
+        // Bài tập 2
+
+        function resetFormRegister() {
+
+            let arrNotice = document.getElementsByClassName("notice");
+
+            for (i = 0; i < arrNotice.length; i++) {
+
+                arrNotice[i].innerHTML = "";  
+            }
+        
+        }
+        function showErr() {
+            resetFormRegister();
+
+            let giaTri = document.getElementsByClassName('register-form');
+            let checkFocus = false;
+            // let soDem = 0;
+            let checkValidRegister = true;
+
+            for (i = 0; i < giaTri.length; i++) {
+                
+                if (giaTri[i].value === "") {
+                    let arrNotice = document.getElementsByClassName("notice");
+                    arrNotice[i].innerHTML = "Vui lòng nhập thông tin đầy đủ.";
+                    checkValidRegister = false;
+                    
+                    if(checkFocus=== false){
+                        giaTri[i].focus(); 
+                        checkFocus= true;
+                    }
+                    
+                }
+                // if (giaTri[i].value !== "") {
+                //     soDem+=1;
+                //     if(soDem == giaTri.length){
+                //         thanhCong();
+                //     }
+                // }   
+            }
+            if (checkValidRegister) {
+                thanhCong();
+            }
+
+        }
+        function thanhCong (){
+            setTimeout(function(){ alert("Bạn đã đăng ký thành công"); }, 5000);
+        }
+
+        // Bài tập 3
+
+        let API ="https://6050aa4a5346090017670332.mockapi.io/list-product";
+        function callAPI (){
+            fetch(API)
+                .then(x => x.json())
+                .then(products => {
+                   
+                    const listProductElement = document.getElementById('listProduct');
+                    let newHtml = listProductElement.innerHTML;
+
+                    products.forEach(product => {
+                        newHtml += 
+                            `<tr>
+                                <td>${product.id}</td>
+                                <td>${product.product_name}</td>
+                                <td>${product.quantity}</td>
+                                <td>${product.price}</td>
+                            </tr>`;
+                    });
+
+                    listProductElement.innerHTML = newHtml;
+                });
+        }
+        callAPI();
+    </script>
+
+</body>
+
+</html>
