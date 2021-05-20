@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<p>10A</p>
+<ul id="10A"> >
+
+</ul>
+<p>10B</p>
+<ul id="10B"> >
+
+</ul>
+<p>10C</p>
+<ul id="10C"> >
+
+</ul>
+
+
+<body>
+    <script>
+        const hs = [{
+            lop: "10A",
+            name: "Quang",
+        }, {
+            lop: "10B",
+            name: "Bảo",
+        }, {
+            lop: "10C",
+            name: "Ngọc",
+        }, {
+            lop: "10C",
+            name: "Tuấn",
+        }, {
+            lop: "10B",
+            name: "Dương",
+        }, {
+            lop: "10A",
+            name: "Tín",
+        }, {
+            lop: "10A",
+            name: "Huấn",
+        }, {
+            lop: "10B",
+            name: "Long",
+        }, {
+            lop: "10A",
+            name: "Phương",
+        }, ];
+        const A10 = document.getElementById("10A");
+        const B10 = document.getElementById("10B");
+        const C10 = document.getElementById("10C");
+        var html = "";
+        var htmlB = "";
+        var htmlC = "";
+        for (let i = 0; i < hs.length; i++) {
+            // console.log(hs[i].lop)
+
+            if (hs[i].lop === "10A") {
+                let namex = `
+                <li>${hs[i].name}</li>
+  
+
+                
+                `;
+
+                html += namex;
+            }
+
+            A10.innerHTML = html;
+            if (hs[i].lop === "10B") {
+                let namex = `
+                         <li>${hs[i].name}</li>
+
+                           `;
+
+                htmlB += namex;
+            }
+
+            B10.innerHTML = htmlB;
+            if (hs[i].lop === "10C") {
+                let namex = `
+         <li>${hs[i].name}</li>
+
+           `;
+
+                htmlC += namex;
+            }
+
+            C10.innerHTML = htmlC;
+        }
+    </script>
+
+    <script>
+        let x = 20;
+        let y = 25;
+        console.log(x = x += 4)
+    </script>
+</body>
+
+</html>
