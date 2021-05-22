@@ -61,12 +61,12 @@
             </div>
         </div>
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary" type="submit" id="submit">Submit form</button>
         </div>
         <p id="demo"></p>
         <script>
             function timeout_trigger() {
-                window.alert('Hello!');
+                window.alert('thành Công đăng nhập!');
             }
 
             function timeout_init() {
@@ -78,7 +78,6 @@
 
                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
                 const forms = document.querySelectorAll('.needs-validation');
-
                 // Loop over them and prevent submission
                 Array.prototype.slice.call(forms).forEach((form) => {
                     form.addEventListener('submit', (event) => {
