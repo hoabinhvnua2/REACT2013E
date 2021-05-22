@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="" oninput="handleChange(event)" />
+    <input
+      type="text"
+      value=""
+      onkeydown="handleChange(event)"
+      placeholder="key down"
+    />
+    <input
+      type="text"
+      value=""
+      onkeyup="handleChange(event)"
+      placeholder="key up"
+    />
+    <input
+      type="text"
+      value=""
+      onkeypress="handleChange(event)"
+      placeholder="key press"
+    />
+
+    <select name="" id="" oninput="handleChange(event)">
+      <option value="">Chon năm sinh</option>
+      <option value="1990">1990</option>
+      <option value="1995">1995</option>
+      <option value="2000">2000</option>
+      <option value="2005">2005</option>
+    </select>
+
+    <ul id="ex"></ul>
+
+    <script>
+      function handleChange(e) {
+        console.log(e);
+        console.log("ggg", e.target.value);
+      }
+
+      const hs = [
+        {
+          lop: "10A",
+          name: "Quang",
+        },
+        {
+          lop: "10B",
+          name: "Bảo",
+        },
+        {
+          lop: "10C",
+          name: "Ngọc",
+        },
+        {
+          lop: "10C",
+          name: "Tuấn",
+        },
+        {
+          lop: "10B",
+          name: "Dương",
+        },
+        {
+          lop: "10A",
+          name: "Tín",
+        },
+        {
+          lop: "10A",
+          name: "Huấn",
+        },
+        {
+          lop: "10B",
+          name: "Long",
+        },
+        {
+          lop: "10A",
+          name: "Phương",
+        },
+      ];
+
+      const result = hs.reduce(
+        (acc, value, index) => {
+          switch (value.lop) {
+            case "10A":
+              acc.lop10a?.push(value);
+              break;
+            case "10B":
+              acc.lop10b?.push(value);
+              break;
+            case "10C":
+              acc.lop10c?.push(value);
+              break;
+            default:
+              break;
+          }
+          return acc;
+        },
+        { lop10a: [], lop10b: [], lop10c: [] }
+      );
+      //   console.log('key', Object.keys(result));
+      //   console.log('value', Object.values(result));
+      let total = "";
+      Object.keys(result).map((key) => {
+        total += `<li>${key}</li>`;
+        result[key].map((v) => {
+          total += `
+                <ul>
+                    <li>${v.name}</li>
+                </ul>`;
+        });
+
+        return total;
+      });
+      console.log(total);
+      document.getElementById("ex").innerHTML = total;
+      //Bài tập: reduce lại DOM HTML không để quá nhiều thẻ ul thừa
+
+      let x = 20;
+      let y = 25;
+
+      if (++x < (y = y -= 4) || (x = x += 4) > y) {
+        console.log(x + y);
+      } else {
+        console.log(123);
+      }
+
+      0 === null; // => ?
+      0 == null; // => ?
+      0 <= null; // => ?
+      0 >= null; // => ?
+      0 < null; // => ?
+      0 > null; // => ?
+
+      //   ôn tập promise: what?, why? how?
+      // PROMISE: là một lời hứa, nó sẽ trả kết quả về trong tương lai
+      // 1 là pending
+      // 2 là fulfill tức là thành công
+      // 3 là rejected tức là bị lỗi
+
+      // promise cung cấp phương thưc all, nó nhận vào 1 mảng các promise và nó sẽ rẹ ngay khi có 1 promise rej
+      // promise cũng cấp phương thức race, nó nhận vào 1 mảng promise, nhưng nó sẽ trả về kết quả của promise đâu tiên kết thúc
+      const promise = new Promise((res, rej) => {
+        // res(4)
+        // rej(5)
+      });
+      fetch().then().then().then().catch().finally();
+      // đất =>
+      // tiền =>
+      // quan hệ =>
+      // xây nhà
+
+
+    //   async await thực chất nó là promise
+      console.log(promise);
+      const showName = async () => {  
+        const r1 =  await console.log(1)
+        const r1 =  await console.log(1)
+        try {
+            const r1 =  await console.log(1)
+            console.log('thực điều gi đó')
+        } catch (error) {
+            
+        }
+      }
+
+    //   cách tìm kiếm gogo -> fetch post method pass request
+    // nodejs
+    // đọc qua về cách xây dwungj project reactjs
+    </script>
+  </body>
+</html>
