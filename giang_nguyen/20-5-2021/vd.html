@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="row">10A</th>
+            </tr>
+        </thead>
+        <tbody id="rowData">
+            <script>
+                const arrData = [
+                    {
+                        lop: '10A',
+                        name: 'Quang'
+                    },
+                    {
+                        lop: '10B',
+                        name: 'Bảo'
+                    },
+                    {
+                        lop: '10C',
+                        name: 'Ngọc'
+                    },
+                    {
+                        lop: '10C',
+                        name: 'Tuấn'
+                    },
+                    {
+                        lop: '10B',
+                        name: 'Dương'
+                    },
+                    {
+                        lop: '10A',
+                        name: 'Tín'
+                    },
+                    {
+                        lop: '10A',
+                        name: 'Huấn'
+                    },
+                    {
+                        lop: '10B',
+                        name: 'Long'
+                    },
+                    {
+                        lop: '10A',
+                        name: 'Phương'
+                    },
+                ]
+                const rowData = document.getElementById('rowData');
+
+                function showData(data) {
+                    let html = '';
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i].lop == "10A") {
+                            const row = `<tr>
+                            <td>${data[i].name}</td>
+                            </tr>`
+                            html += row
+                        }
+                    }
+                    html += '<th scope="row">10B</th>';
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i].lop == "10B") {
+                            const row = `<tr>
+                            <td>${data[i].name}</td>
+                            </tr>`
+                            html += row
+                        }
+                    }
+                    html += '<th scope="row">10c</th>';
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i].lop == "10C") {
+                            const row = `<tr>
+                            <td>${data[i].name}</td>
+                            </tr>`
+                            html += row
+                        }
+                    }
+                    rowData.innerHTML = html
+                }
+
+                showData(arrData);
+            </script>
+</body>
+
+</html>
