@@ -54,11 +54,14 @@
             <button>Đăng Ký</button>
         </div>
     </div>
+    <!--Logic xử lí để có thể dùng ở cả các project khác-->
     <script src="validator.js"></script>
     <script>
         Validation({
             form:'#form-signup',
             formMessage:'.form-message',
+            //Các tác vụ xử lí có các giá trị mà yêu cầu của bài đã cho sẵn
+            //để cho phần logic nhận vào
             handlers: [
                 Validation.isRequired('#firstname','Bạn chưa nhập trường này'),
                 Validation.isRequired('#lastname','Bạn chưa nhập trường này'),
@@ -69,11 +72,11 @@
                 Validation.isPassword('#password',6,'Mật khẩu phải có ít nhất 6 kí tự'),
                 Validation.isRequired('#confirmpassword','Bạn chưa nhập trường này'),
                 Validation.isPasswordRight('#confirmpassword',() => {
-                    return document.querySelector('#form-signup #password').value;
+                    return document.querySelector('#form-signup #password').value
                 },6,'Mật khẩu phải có ít nhất 6 kí tự'),
                 Validation.isConfirmPassword('#confirmpassword',() => {
                     return document.querySelector('#form-signup #password').value
-                },'Nhập lại mật khẩu sai, mời nhập lại'),   
+                },'Nhập lại mật khẩu sai, mời nhập lại')
             ]
         });
     </script>

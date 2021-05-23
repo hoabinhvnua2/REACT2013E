@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+<script>
+    const hs = [
+            {
+                lop: '10A',
+                name: 'Quang'
+            },
+            {
+                lop: '10B',
+                name: 'Bảo'
+            },
+            {
+                lop: '10C',
+                name: 'Ngọc'
+            },
+            {
+                lop: '10C',
+                name: 'Tuấn'
+            },
+            {
+                lop: '10B',
+                name: 'Dương'
+            },
+            {
+                lop: '10A',
+                name: 'Tín'
+            },
+            {
+                lop: '10A',
+                name: 'Huấn'
+            },
+            {
+                lop: '10B',
+                name: 'Long'
+            },
+            {
+                lop: '10A',
+                name: 'Phương'
+            },
+            {
+                lop: '10B',
+                name: 'Anh'
+            },
+            {
+                lop: '10C',
+                name: 'Hùng'
+            },
+            {
+                lop: '10C',
+                name: 'Duy'
+            },
+        ]
+
+    
+    function handler(hs) {
+        let ulElement = document.querySelector('#main');
+        const res = hs.reduce((a,hs,i) => {
+            switch (hs.lop) {
+            case '10A' :
+                a.lopA.push(`${hs.lop} :`,`<li>${hs.name}</li>`);
+                break;
+            case '10B' :
+                a.lopB.push(`${hs.lop} :`,`<li>${hs.name}</li>`);
+                break;
+            case '10C' : 
+                a.lopC.push(`${hs.lop} :`,`<li>${hs.name}</li>`);
+                break;
+            }
+            return a;
+        },{lopA:[],lopB:[],lopC:[]});
+        let liElements = Object.values(res).map(result => {
+            return `<ul>Lớp ${Array.from(new Set(result)).join('')}
+                </ul>`
+        });
+        ulElement.innerHTML = liElements.join('');
+    }
+    handler(hs);
+</script>
+</html>
