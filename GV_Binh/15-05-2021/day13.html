@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <style>
+      .custom-color {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="number1" />
+    <input type="text" name="" id="number2" />
+    <br />
+    <button onclick="tinhToan('+')">+</button>
+    <button onclick="tinhToan('-')">-</button>
+    <button onclick="tinhToan('*')">*</button>
+    <button onclick="tinhToan('/')">/</button>
+    <br />
+    <span id="result"></span>
+
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Số lượng</th>
+          </tr>
+        </thead>
+        <tbody id="rowData">
+          
+
+        </tbody>
+      </table>
+
+    <!-- <input type="text" id="userName" value="React">
+    <p class="custom-color">Tôi học lớp <strong style="display: none">React</strong></p>
+    <p class="custom-color">HTML</p>
+    <p class="custom-color">CSS</p>
+
+    <p id="result">Hay click vao toi</p>
+    <button onclick="sayHello()">Say hello</button> -->
+
+    <script src="./myScript.js"></script>
+    <!-- <script>
+        // get element theo id
+        const valueText = document.getElementById('userName');
+        const textP = document.getElementsByClassName('custom-color')
+        const textTag = document.getElementsByTagName('p')
+        const result = document.getElementById('result')
+        // result.textContent = `<strong>React</strong>`
+
+        textP[2].style.color = 'red'
+
+        valueText.value = 'Javascript'
+        console.log('value', valueText.value)
+        console.log('valueClass0', textP[0].innerText)
+        //  để lấy đc text có 1 cách 
+        // dùng innerHTML => get set cả thẻ html
+        // dùng innerText => get đoạn text đã được render
+        // dùng textContent => chỉ get về text của tag
+        console.log('tag', textTag)
+
+        // DOM event
+        // click || dbclick
+        // keyUP || keyDown || keyPress
+
+        function clickMe() {
+            alert('Ban vua click vao toi!')
+        }
+
+        function sayHello() {
+            console.log('XIn chaof banj')
+        }
+
+        // Dom listener
+        document.getElementById('result').addEventListener('click', function() {
+            clickMe()
+        })
+
+
+    </script> -->
+  </body>
+</html>

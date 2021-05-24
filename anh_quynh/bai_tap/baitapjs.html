@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Bài tập 1_ số chẵn */
+       alert ("Bài tập 1_ Xuất hiện số chẵn");
+
+        let evenNumber = "";
+        for (i = 2; i < 11; i++) {
+            if (i % 2 === 0) {
+                if (i < 10) {
+                    evenNumber += i + ", ";
+                } else {
+                    evenNumber += i;
+                }
+
+            }
+        }
+        alert("Các số chẵn là: " + evenNumber);
+
+        /* Bài tập 2_ nhập số lớn hơn 100 */
+        alert ("Bài tập 2 _ Nhập số lớn hơn 100");
+
+        let nhapSo = prompt("Nhập số lớn hơn 100");
+        while (nhapSo < 101) {
+            nhapSo = prompt("Vui lòng nhập số lớn hơn 100");
+        }
+
+        /* Bài tập 3_ hàm min (a,b)*/
+        alert ("Bài tập 3_ Tạo hàm Min(a,b)");
+
+        function hamMin(a, b) {
+            if (a > b) {
+                return b;
+            } else {
+                return a;
+            }
+        }
+
+        alert("Giá trị nhỏ là: " + hamMin(
+            prompt("Vui lòng nhập số thứ 1"),
+            prompt("Vui lòng nhập số thứ 2")
+            ));
+
+        /* Bài tập 4_ hàm tính toán */
+        alert ("Bài tập 4_ Tạo hàm tính toán");
+
+        function tinhToan(soThuNhat, soThuHai, phepTinh) {
+            soThuNhat = +soThuNhat;
+            soThuHai = +soThuHai;
+            
+            if (phepTinh === "+") {
+                return soThuNhat + soThuHai;
+            } else if (phepTinh === "-") {
+                return soThuNhat - soThuHai;
+            } else if (phepTinh === "*") {
+                return soThuNhat * soThuHai;
+            } else {
+                return soThuNhat / soThuHai;
+            }
+        }
+        alert("Giá trị tính toán là: " + tinhToan(
+            prompt("Vui lòng nhập số thứ 1"),
+            prompt("Vui lòng nhập số thứ 2"),
+            prompt("Vui lòng nhập phép toán")    
+         ));
+
+        /* Bài tập 5_ hàm kiểm tra số nguyên tố */
+        alert ("Bài tập 5_ Tạo hàm kiểm tra số nguyên tố");
+
+        let checkSo = prompt("Vui lòng nhập số");
+        let ketQua = true;
+
+        if (checkSo < 2) {
+            ketQua = false;
+        
+        } else {
+
+            for (let i=2; i <= checkSo -1; i++) {
+                if (checkSo % i === 0){
+                     ketQua = false;
+                     break;
+                }
+        
+            }
+         }
+
+
+        if (ketQua === false) {
+            alert(checkSo + ": Không phải là số nguyên tố");
+        }else {
+            alert(checkSo + ": là số nguyên tố");
+        }
+
+        document.write("<h1>" + "Em đã hoàn thành bài tập." + "<br>" +
+            "Cám ơn Thầy đã kiểm tra." + "</h1>");
+
+    </script>
+</body>
+
+</html>
