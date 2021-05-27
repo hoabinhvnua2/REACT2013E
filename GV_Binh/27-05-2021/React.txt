@@ -1,0 +1,16 @@
+React là 1 thư viện javascript. dùng để xây dựng giao diện người dùng
+
+1. Component: là thành phần , dùng để xay dwungj nên các giao diện
+2. State: là các trạng thái của app và của các component
+3. Props: cũng là trạng thái của app, nhưng nó được sử để
+ truyền dữ liệu từ cha sang con
+4. Context API
+5. Rendering (Dom ảo virtual DOM)
+6. Hook
+7. Redux
+8. Middleware
+
+- function component: dùng khi không cần đến state
+- class component: dùng khi mà có state
+- state là 1 biến lưu trữ giá trị cần quản lý
+- props dùng để truyền state từ cha xuống con
