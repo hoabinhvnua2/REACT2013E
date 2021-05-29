@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .conten {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+    }
+    
+    button {
+        margin-left: 230px;
+    }
+    
+    .chung {
+        display: flex;
+        /* margin: 20px 50px; */
+        height: 50px;
+    }
+    
+    .rieng {
+        margin-top: 10px;
+        width: 20px;
+    }
+    
+    input {
+        margin-left: 20px;
+        width: 220px;
+        height: 30px;
+        line-height: 70px;
+    }
+    
+    p {
+        width: 130px;
+        margin-left: 0px;
+        font-weight: 900;
+    }
+    
+    form {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="conten">
+        <div class="firstName chung">
+            <p>First Name</p>
+            <input type="text" id="firstName" value="" class="giatri">
+
+        </div>
+        <div class="lastName chung">
+            <p>Last Name </p>
+            <input type="text" id="lastName" class="giatri">
+
+        </div>
+
+        <div class="userName chung">
+            <p>User Name </p>
+            <input type="text" id="userName" class="giatri">
+
+        </div>
+        <div class="email chung">
+            <p>Email</p>
+            <input type="email" id="email" class="giatri">
+
+        </div>
+        <div class="password chung">
+            <p>Password</p>
+            <input type="password" id="password" class="giatri">
+
+        </div>
+        <div class="confirmpassword chung">
+            <p>Confirm password</p>
+            <input type="password" id="confirmpassword" class="giatri">
+
+        </div>
+        <div class="gender chung">
+            <p>Gender</p>
+            <form>
+                <input type="radio" name="gender" value="nam" class="rieng" checked>
+                <p>nam</p>
+                <input type="radio" name="gender" value="nu" class="rieng">
+                <p>nữ</p>
+
+
+            </form>
+
+
+        </div>
+        <div class="btn">
+            <button onclick="out()">Đăng Ký</button>
+        </div>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
