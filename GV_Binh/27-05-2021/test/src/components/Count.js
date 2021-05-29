@@ -11,6 +11,14 @@ class Counter extends Component {
         }
     }
 
+    // componentWillMount() {
+    //     console.log('Tooi laf WillMount')
+    // }
+
+
+    // componentDidMount() {
+    //     console.log('Tôi là did moumt')
+    // }
     handleClickCong = () => {
         this.setState({
             count: this.state.count + 1
@@ -24,6 +32,7 @@ class Counter extends Component {
     }
 
     render() {
+        console.log('Tôi là Render')
         const {count, loading, userName} = this.state
         return(
             <div>

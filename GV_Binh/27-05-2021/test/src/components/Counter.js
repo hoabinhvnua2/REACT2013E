@@ -8,8 +8,8 @@ const Count = () => {
     return(
         <div>
             <p>{count}</p>
-            <button onClick={() => setCount(c => c + 1)}>+</button>
-            <button onClick={() => setCount(c => c - 1)}>-</button>
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(count - 1)}>-</button>
         </div>
     )
 }
