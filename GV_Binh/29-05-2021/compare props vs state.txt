@@ -1,0 +1,15 @@
+
+State:
+    + Có thể khổi tạo giá trị ban đầu từ component Cha => YES
+    + Có thể bị thay đổi bới component cha hay ko? => NO
+    + Có thể set giá trị mặc định ngay trong component hay ko? => YES
+    + Có thể thay đổi giá trị ngay trong component hay ko? => YES
+    + Có thể gán giá trị ban đầu cho component con hay ko? => YES
+    + Có thể bị thay đổi trong component con hay ko? => NO
+Props: 
+    + Có thể khổi tạo giá trị ban đầu từ component Cha => YES
+    + Có thể bị thay đổi bới component cha hay ko? => YES
+    + Có thể set giá trị mặc định ngay trong component hay ko? => NO
+    + Có thể thay đổi giá trị ngay trong component hay ko?  => NO
+    + Có thể gán giá trị ban đầu cho component con hay ko? => YES
+    + Có thể bị thay đổi trong component con hay ko? => YES

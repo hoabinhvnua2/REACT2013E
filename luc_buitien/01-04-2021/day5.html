@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs 2103</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .classname {
+            -moz-box-shadow: 0px 1px 0px 0px #fff6af;
+            -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+            box-shadow: 0px 1px 0px 0px #fff6af;
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23) );
+            background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');
+            background-color:#ffec64;
+            -webkit-border-top-left-radius:6px;
+            -moz-border-radius-topleft:6px;
+            border-top-left-radius:6px;
+            -webkit-border-top-right-radius:6px;
+            -moz-border-radius-topright:6px;
+            border-top-right-radius:6px;
+            -webkit-border-bottom-right-radius:6px;
+            -moz-border-radius-bottomright:6px;
+            border-bottom-right-radius:6px;
+            -webkit-border-bottom-left-radius:6px;
+            -moz-border-radius-bottomleft:6px;
+            border-bottom-left-radius:6px;
+        text-indent:0;
+            border:1px solid #ffaa22;
+            display:inline-block;
+            color:#ffffff;
+            font-family:arial;
+            font-size:15px;
+            font-weight:bold;
+            font-style:normal;
+        height:50px;
+            line-height:50px;
+        width:140px;
+            text-decoration:none;
+            text-align:center;
+            text-shadow:0px 1px 0px #ffee66;
+        }.classname:hover {
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64) );
+            background:-moz-linear-gradient( center top, #ffab23 5%, #ffec64 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64');
+            background-color:#ffab23;
+        }.classname:active {
+            position:relative;
+            top:1px;
+        }</style>
+
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!--navigation-->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-branch CREVEA" href="#"><p class="aaa">CREVEA Inc.</p></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#myPage">Home</a></li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#OURBUSINESS">OUR BUSINESS</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#aboutus">ABOUT US</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#newss">NEWS</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                  </li>
+          </ul>
+       </div>
+    </div>
+</nav>
+<!---->
+<div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./img/students.jpg" alt="student">
+        </div>
+        <div class="carousel-item ">
+            <img src="./img/students.jpg" alt="student">
+        </div>
+        <div class="carousel-item ">
+            <img src="./img/students.jpg" alt="student">
+        </div>
+    </div>
+</div>
+<!---->
+<div id="aboutus" class="container-fluid padding1">
+    <div class="row slideanim">
+        <div class="col-md-12 col-lg-2">
+
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <span class="span1"> <span class="span2">▬▬</span>  ABOUT US</span>
+            <h2 class="h2"><b> Our goal is "to support and connect aducational institutions, companies accross the work by providing highly qualified/skilled human resource for mutual development and consulting services in job and skills training". Achieving this, we hope to contribute to the betterment of society.</b></h2>
+            <p>Our staff are highly experienced and senior member of diverse backgrouds in educational institutions and companies in Vietnam and other territories across the globe. Wecould provide superior sevices to our customers.</p>
+        <br>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <img src="./img/Business.JPG" id="img4" >
+
+        </div>
+        <div class="col-md-12 col-lg-2">
+
+        </div>
+    </div>
+    
+</div>
+
+<!---->
+<div id="our" class="container-fluid ">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 img-responsive anh11"></div>
+        <div class="col-md-12 col-lg-6 col-sm-12 img-responsive anh22 clideanim">
+            <p><span>▬▬</span> Our business</p>
+        <ul>
+            <li><img src="./img/Handshake.jpg" alt="bat tay"><br>
+               <h2>Education consulting</h2>
+                We offer various services as required from different educational institutions in Vietnam.</li><br>
+            <li><img src="./img/Books.png" alt="anh sach"><br>
+               <h2>Business consulting</h2>
+                We provide various services according to requests from foreign companies and educational institutions.</li><br>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="newss">
+    <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-xs-12 col-sm-8 col-md-8 slideanim">
+            <div id="main23">
+                <a href=""><p><span>▬▬</span> News</p></a>
+                 <h1> Latest News</h1>
+             </div>
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+
+    </div>
+    
+ </div>
+
+
+
+ <!---->
+ <div id="sua" class="container-fluid">
+     <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-xs-12 col-sm-8 col-md-8 slideanim">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./img/News 2.jpg" alt="" width="400" height="300">
+                       <a href=""><h2><b>Japanese staff agency company visited to Hanoi</b></h2></a><br>
+                       <a href=""><p>Read more ➞ </p></a><br>
+                       </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./img/News 1.jpg" alt="" width="400" height="300">
+                        <a href=""><h2><b> university visited to <br> Hanoi </b></h2></a><br>
+                        <a href=""><p>Read more ➞ </p></a><br>
+                       </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./img/Class.jpg" alt="" width="400" height="300">
+                        <a href=""><h2><b> We are pleased to announce the renewal of CREVEA Inc. official website. </b></h2><br>
+                            <p> We changed the whole design and format to create more efficient and superior experience for our customers once they visit the website. We will continue updating it and providing more useful information. The website in Japanese will come out soon.<br></p></a><br>
+                        <a href=""><p>Read more ➞ </p></a><br>
+                         </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+     </div>
+ </div>
+ 
+<!---->
+
+<!---->
+<div id="contact" class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-xs-12 col-sm-4 col-md-4 slideanim">
+            <span class="span1"> <span class="span2">▬▬</span>  Contacts</span>
+            <h2 class="h2"><b> We will connect you with the relevant person in chage. Please click "Send button" after providing your registering input.</b></h2>
+           
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your name">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Email address">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                    <input class="form-control" id="tel" type="tel"   placeholder="Phone number">
+                </div>
+
+            </div>
+            <textarea class="form-control" class="ion-disc" name="comments" id="comments" cols="30" rows="10" placeholder="your massager"></textarea>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div id="googleMap" style="height: 300px;width: 100%;"></div>
+
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+
+    </div>
+
+</div>
+
+<div id="button" class="container-fluid text-center">
+    <a href="#" class="classname">Send Message</a>
+</div>
+
+
+
+
+
+
+
+<!---->
+<div id="LienHe" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec"></div>
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec">
+            <div id="footer2">
+                <h3>CREVEA</h3>
+                <P>Add: No 45C, 210 alley Hoang Quoc Viet street Cau Giay-Ha Noi-Viet Nam</P>
+                <p>☎ TEL:(+84)-989-412-665</p>
+                <p>Email: daisuke.kawashima@crecea.vn</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec">
+            <div id="footer2">
+                <h3>CATEGORYS</h3>
+                <ul>
+                    <li><a href="http://google.com">Home</a></li>
+                    <li><a href="http://google.com">OUR BUSINESS</a></li>
+                    <li><a href="http://google.com">ABOUT US</a></li>
+                    <li><a href="http://google.com">NEWS</a></li>
+                    <li><a href="http://google.com">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec">
+            <div id="footer2">
+                <h3>LANGUAGE</h3>
+                <ul>
+                 <li><a href="http://google.com">English</a></li>
+                 <li><a href="http://google.com">Japanese</a></li>
+                </ul>
+             </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec">
+            <div id="footer2">
+                <h3>GET OUR NEWS FROM US</h3>
+                <P>Please enter the email below to not miss the latest news from us!</P>
+                <input type="email" placeholder="Your email enter" size="15">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 lienhec"></div>
+    </div>
+</div>
+
+<!---->
+<div id="thongtin" class="container-fluid text-center">
+    <b>© 2018 CREVEA Inc. All rights Reverved.</b>
+</div>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(21.047329,105.787253);
+
+function initialize() {
+    var mapProp = {
+        center:myCenter,
+        zoom:12,
+        scrollwheel:false,
+        draggable:false,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var market = new google.maps.Market({
+        position:myCenter,
+    });
+    marker.setMap(map);
+}
+    google.maps.event.addDomListener(window,'load',initialize);
+
+</script>
+</body>
+</html>

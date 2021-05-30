@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  các cơ chế xử lý bất đồng bộ js
+      // 1. call back
+      // 2. Promise và asyn await
+      // 3. Observable
+
+      // callback hell
+      // function name(fn1) {
+      //     fn1(fn2) {
+      //         fn2(fn3) {
+      //             fn3() {
+
+      //             }
+      //         }
+      //     }
+      // }
+
+      // Promise là một lời hứa, sẽ trả về kết quả trong tương lai
+      // có 3 trạng thái
+      // pending
+      // fulfill
+      // reject
+      // Promis cung cấp các phương thức sau:
+      // then -> xử lý promise và đưa kết quả
+      // catch -> xử lý lỗi
+      // all => call đồng thời nhiều promise,
+      // đầu vào là 1 mảng các promise và nó sẽ dừng lại ngay sau khi có
+      //  1 promise bị lỗi
+
+      // race => nhận vào mooitj mảng các promise,
+      // trả về kết qảu đầu tiên mà nó nhận dc
+
+      const promise = new Promise((resolve, reject) => {
+        const x = 403;
+        // reject('Lỗi rồi')
+        if (x === 403) {
+          throw Error("Không quyền truy cập");
+          return false;
+        }
+        resolve(x);
+      });
+      promise
+        .then((x) => console.log(x))
+        .catch((err) => console.log(err))
+        .finally((z) => "Kết thúc quá trình");
+
+      function sum(number1) {
+        return number1 + 2;
+      }
+
+      // giả sử kết quả trả về của sum là 5
+      function showResult(number2) {
+        return number2 + 5;
+      }
+      // sử dụng promise để thực hiện xử lý bất đồng bộ
+
+      const result = new Promise((res, rej) => {
+        const t = sum(3);
+        res(t);
+      });
+      result
+        .then((x) => showResult(x))
+        .then((y) =>  y)
+        .catch((err) => console.log(err));
+
+      // ví dụ về follow login
+    //   const logIn = new Promise((res, rej) => {
+    //     setTimeout(() => {
+    //       rej("bạn đăng nhâp không thành công");
+    //     }, 5000);
+    //   });
+      //   logIn.then((x) => console.log(x)).catch((err) => console.log(err));
+
+      // call api product
+      const API = "https://6050aa4a5346090017670332.mockapi.io/list-product";
+      function getProduct() {
+        fetch(API)
+          .then((x) => x.json())
+          .then((y) => y)
+          .catch((err) => console.log(err));
+      }
+      getProduct();
+
+      //  phương thức all
+      const number1 = new Promise((res) => {
+          setTimeout(() => {
+            res(2)
+          }, 2000)
+      });
+      const number2 = new Promise((res) => {
+          setTimeout(() => {
+            res(3)
+          }, 3000)
+      });
+      const number3 = new Promise((res) => {
+          setTimeout(() => {
+            res(5)
+          }, 5000)
+      });
+
+      Promise.race([number2, number1, number3])
+        .then((x) =>x)
+        .catch((err) => console.log("err", err));
+
+      // async và await
+      const test = async () => {
+        try {
+          const n1 = await number1;
+          const n2 = await number2;
+          const n3 = await number3;
+          console.log("number1", n1);
+          console.log("number2", n2);
+          console.log("number3", n3);
+        } catch (error) {
+          console.log("err", error);
+        }
+      };
+
+      test();
+    </script>
+  </body>
+</html>

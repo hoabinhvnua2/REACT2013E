@@ -1,0 +1,104 @@
+@import './common/color-style/color.scss';
+
+// @extend
+.unline {
+  text-decoration: underline;
+}
+
+// @mixin - @include
+@mixin styleText($key1, $val1, $key2, $val2) {
+  #{$key1}: $val1;
+  #{$key2}: $val2;
+}
+
+// @function - trả về giá trị
+@function setWidth($so1, $so2) {
+  @if ($so1 == 0) {
+    @return ($so2 + 100);
+  } @else {
+    @return ($so1 + $so2)/2;
+  } 
+}
+
+// bài tập
+// cho 6 item sử dụng for làm sao để cho các item ở vị trí chẵn có màu đỏ
+// @for
+
+  $length: 6;
+  @for $i from 1 to 7 {
+    @if ($i % 2 == 0) {
+      .item-#{$i} {
+        @include styleText(text-decoration, underline, color, red); 
+      }
+    }
+  }
+
+
+  // 
+.App {
+  text-align: center;
+  width: setWidth(0, 500px);
+  // @if và @else
+
+  .text-red {
+    @include styleText(text-decoration, underline, text-align, left);
+    color: red;
+  }
+
+  .text-blue {
+   
+    color: $blue;
+  }
+
+  .list {
+    li {
+      color: yellow;
+    }
+  }
+}
+
+
+// chuẩn bem
+.app {
+  width: 100%;
+  height: 500px;
+  &.app--red {
+    background-color: red;
+  }
+  .app__child1 {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+  }
+}
+// Bem rút gọn
+
+.app {
+  width: 100%;
+  height: 500px;
+  &.-red {
+    background-color: red;
+  }
+  .app__child1 {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    &.-blink {
+      color: yellow;
+    }
+  }
+}
+
+.custom-btn {
+
+
+  &.btn-success {
+    background-color: yellow;
+  }
+  &.btn-pri {
+    background-color: blue;
+  }
+  &.btn-err {
+    background-color: red;
+  }
+}

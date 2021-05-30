@@ -1,0 +1,139 @@
+@media only screen and (max-width:767px){
+    .header-1{
+        width: 100%;
+        font-size: 20px;
+        background-color: white;
+    }
+    .header-2{
+        display: none;
+    }
+    .header-1 ul li{
+        display: inline-block;
+        margin-left: 10%;
+    }
+    #icon-bar, #icon-search{
+        display: inline-block;
+    }
+    .white{
+        color: #1274D0;
+        font-weight: bold;
+    }
+    /* sau anh 1 */
+    .banner{
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .row-1, .row-2{
+        width: 97%;
+        margin: 3%;
+    }
+    .row-2 img{
+        width:98% ;
+    }
+    /* sau anh 2 */
+    .banner-2{
+        margin: 100px 0;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+    .row-3{
+    width: auto;
+    height: 40%;
+    background-image: url(anh3.jpg);
+    background-position: center;
+    background-size: cover;
+    }
+    .row-4{
+    width: auto;
+    height: 60%;
+    background-image: url(anh10.jpg);
+    background-position: center;
+    background-size: cover;
+    }
+    .row-41{
+        margin-left: 15%;
+    }
+    .row-421 img{
+        width: 40px;
+        height: 40px;
+        margin: 25px ;
+        border-radius: 50%;
+    }
+    .row-422{
+    /* padding-left: 6px; */
+    margin-top: -5px;
+    color: white;
+    text-align: center;
+    }
+    .row-43{
+        margin-top: 10px;
+    }
+    /* sau hai anh 3-4 */
+    .banner-3{
+        margin: 0;
+        padding:0;
+        height: auto;
+    }
+    .new-1{
+        display: block;
+        margin-top: 5px;
+    }
+    .new-2{
+        width: 100%;
+        margin:10px 0;
+        
+        border:1px solid #ced4da;
+    }
+    .new-3{
+        width: 100%;
+        margin:10px 0;
+        position: relative;
+        border:1px solid #ced4da;
+    }
+    /* sau 3 anh */
+    .banner-4{
+        margin: 100px  0 ;
+    }
+    .new-z{
+        padding: 0;
+        height: auto;
+        display: block;
+    }
+    .new-a, .new-b{
+        width: 100%;
+    }
+    .input-1{
+        display: block;
+    }
+    .input-1 input{
+        width: 99%;
+        margin: 10px 0;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border:1px solid #ced4da;
+    }
+    textarea{
+        padding: 5px;
+    }
+    /* ket thuc */
+    .end{
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    .end-1{
+        display: block;
+        margin:0 20px;
+        /* padding-top: 30px; */
+    }
+    .end-11, .end-12, .end-13, .end-14{
+        width: 100%;
+        color: white;
+        margin-left: 1%;
+    }
+    .input-3 button{
+        margin-right: 1px;
+    }
+}
