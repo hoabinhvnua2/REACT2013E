@@ -29,3 +29,4 @@ dấu ... là các giá trị mà các bạn phải viết hàm random để t�
 		...
 	}
 5. Tính tổng số các bạn có điểm 7 của tất cấc lớp
+// ok
