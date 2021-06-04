@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="soA">
+    <span id="dau"></span>
+    <input type="text" id="soB">
+    <span>=</span>
+    <input type="text" id="soC" disabled>
+    <br>
+
+    <div class="action" style="margin-top: 10px;">
+        <button id="cong">+</button>
+        <button id="tru">-</button>
+        <button id="nhan">*</button>
+        <button id="chia">/</button>
+        <button id="mu">^</button>
+    </div>
+
+</body>
+
+<script>
+
+    const a = document.getElementById("soA");
+    const b = document.getElementById("soB");
+    const c = document.getElementById("soC");
+    const dau = document.getElementById("dau");
+
+    document.getElementById("cong").addEventListener("click", () => {
+        const valueA = +a.value;
+        const valueB = +b.value;
+
+        if (!a && !b) {
+            alert("Vui lòng nhập a và b")
+            return;
+        }
+
+        dau.innerHTML = "+"
+        c.value = valueA + valueB;
+    })
+
+    document.getElementById("tru").addEventListener("click", () => {
+        const valueA = +a.value;
+        const valueB = +b.value;
+
+        if (!a && !b) {
+            alert("Vui lòng nhập a và b")
+            return;
+        }
+
+        dau.innerHTML = "-"
+        c.value = valueA - valueB;
+    })
+
+    document.getElementById("nhan").addEventListener("click", () => {
+        const valueA = +a.value;
+        const valueB = +b.value;
+
+        if (!a && !b) {
+            alert("Vui lòng nhập a và b")
+            return;
+        }
+
+        dau.innerHTML = "*"
+        c.value = valueA * valueB;
+    })
+
+    document.getElementById("chia").addEventListener("click", () => {
+        const valueA = +a.value;
+        const valueB = +b.value;
+
+        if (!a && !b) {
+            alert("Vui lòng nhập a và b")
+            return;
+        }
+
+        dau.innerHTML = "/"
+        c.value = valueA / valueB;
+    })
+
+    document.getElementById("mu").addEventListener("click", () => {
+        const valueA = +a.value;
+        const valueB = +b.value;
+
+        if (!a && !b) {
+            alert("Vui lòng nhập a và b")
+            return;
+        }
+
+        dau.innerHTML = "^"
+        c.value = Math.pow(valueA, valueB);
+    })
+</script>
+
+</html>
