@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+// import Product from './components/Product';
+// import Count from './components/Counter';
+// import Counter from './components/Count';
+import Tasks from './components/Tasks';
 
+// JSX
 function App() {
+  // const [username, setUserName] = useState('REACT')
+  // const [loading, setLoading] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <p>Tôi học lớp Reactjs</p>
+      <p>React là một thư viện Javascript</p>
+      <button onClick={() => setLoading(!loading)}>{loading ? 'Ẩn' : 'Hiển thị'}</button>
+      <Product />
+      <Count />
+      {
+        loading && <Counter />
+      } */}
+      <Tasks />
+
     </div>
   );
 }
