@@ -1,0 +1,47 @@
+.conten{
+    height: 40px;
+    background-color: #365899;
+    width: 100%;
+    display: block;
+    display: flex;
+   .link{
+       width: 70%;
+       display: flex;
+       justify-content: space-around;
+       line-height: 40px;
+       p{
+        color: white;
+        position: relative;
+        
+        i{
+            font-weight: 100;
+        }
+       
+       }
+       p::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        margin-top: 10px;
+        margin-left: 15px;
+        border-left:  solid #ddd;
+       
+      
+        color: white;
+
+    }
+    
+       a{
+        text-decoration: none;
+        color: white;
+       }
+
+
+   }
+   .logIn{
+    line-height: 40px;
+    width: 30%;
+    color: white;
+   }
+}
