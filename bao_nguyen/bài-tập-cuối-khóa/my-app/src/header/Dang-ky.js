@@ -1,14 +1,29 @@
-import React from 'react'
-import './Dang-ky.scss'
+import React,{useState} from "react";
+import "./Dang-ky.scss";
+import FromDk from "./From/From-dk";
 
-const Dk =()=>{
-    return(
-        <div className='conten'>
-            <a href='https://www.apple.com/' target ='_blank' className='link-dk'> <i class="fa fa-user-circle-o" aria-hidden="true"> Đăng nhập </i></a>
-            <div className='boder'></div>
-            <a href='https://www.apple.com/' target ='_blank' className='link-dk'> Đăng Ký </a>
+
+import "reactjs-popup/dist/index.css";
+import Button from "react-bootstrap/Button";
+
+const Dk = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <> 
+     
+    
+     <FromDk show={modalShow} onHide={() => setModalShow(false)} />
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        <div className="conten-dk">
+          <div className="boder"></div>
+          <button className="link-dk"> đăng Ký </button>
         </div>
-    )
-}
- 
+      </Button>
+
+      <FromDk show={modalShow} onHide={() => setModalShow(false)} />
+    </>
+  );
+};
+
 export default Dk;

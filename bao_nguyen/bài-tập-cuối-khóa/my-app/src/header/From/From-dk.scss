@@ -1,0 +1,81 @@
+.conten-From_Dk {
+  position: fixed;
+  display: flex;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  .from-dk {
+    button {
+      background-color: white;
+      border: white;
+    }
+    margin: auto;
+
+    width: 800px;
+    background-color: white;
+
+    border-radius: 5px;
+
+    .from-next {
+        .btn-primary {
+            color: #fff;
+            /* background-color: #007bff; */
+            /* border-color: #007bff; */
+        }
+      p {
+        margin: 0 auto;
+        font-weight: 700;
+      }
+      .btn-color {
+        color: rgba($color: #0069d9, $alpha: 0.8);
+      }
+
+      width: 600px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .from-input {
+      width: 700px;
+
+      input {
+        width: 600px;
+        margin-bottom: 15px;
+
+        margin-left: 100px;
+      }
+    }
+    .from-btn {
+      width: 600px;
+
+      display: flex;
+      margin-left: 465px;
+      margin-bottom: 20px;
+      .btn-color {
+        color: rgba($color: #0069d9, $alpha: 0.8);
+      }
+      button {
+        margin-left: 50px;
+        font-weight: 700;
+      }
+    }
+    .lien-ket{
+        width: 100%;
+        height: 50px;
+        display: flex;
+     
+       
+        .fb{
+            width: 50%;
+            background-color: rgba($color: #0a0303, $alpha: 0.1);
+        }
+        .gg{
+            width: 50%;
+            background-color: rgba($color: #0a0303, $alpha: 0.1);
+        }
+    }
+  }
+}
