@@ -1,6 +1,8 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import User from './components/User';
+import Count from './components/Counter';
 
 // const initialState = {
 //   count: 0,
@@ -27,8 +29,8 @@ function App() {
   // }
 
   return (
-    <div className="App">
-     <button>+</button>
+    <div className="App container">
+     {/* <Count /> */}
      <User />
     </div>
   );

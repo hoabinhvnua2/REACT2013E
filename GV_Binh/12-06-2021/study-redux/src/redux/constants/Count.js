@@ -1,5 +1,12 @@
 export const countAction = {
-    CONG: 'CONG',
-    TRU: 'TRU'
+    INCREMENT: 'INCREMENT',
+    DECREMENT: 'DECREMENT'
 }
 
+export const onIncrement = () => ({
+    type: countAction.INCREMENT
+})
+
+export const onDecrement = () => ({
+    type: countAction.DECREMENT
+})
