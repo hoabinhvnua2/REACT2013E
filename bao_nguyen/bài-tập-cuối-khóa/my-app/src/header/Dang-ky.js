@@ -17,7 +17,7 @@ const Dk = () => {
       <Button variant="primary" onClick={() => setModalShow(true)}>
         <div className="conten-dk">
           <div className="boder"></div>
-          <button className="link-dk"> đăng Ký </button>
+          <button className="link-dk"> Đăng Ký </button>
         </div>
       </Button>
 

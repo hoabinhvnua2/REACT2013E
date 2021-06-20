@@ -1,8 +1,12 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 import Modal from "react-bootstrap/Modal";
+import FromDn from "./From-dn";
 import "./From-dk.scss";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+
 const FromDk = (props) => {
+  
   return (
     <Modal
       {...props}
@@ -10,12 +14,13 @@ const FromDk = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Body >
+      <Modal.Body>
         <div className="conten-From_Dk">
           <div className="from-dk">
             <div className="from-next">
               <button>
-                <p>Đăng Nhâp</p>
+               Đăng nhập
+               mở đi
               </button>
               <button className="btn-color">
                 <p>Đăng Ký</p>
@@ -23,9 +28,9 @@ const FromDk = (props) => {
             </div>
             <div className="from-input">
               <input placeholder="Tên Đăng Nhập"></input>
-              <input placeholder="Password"></input>
+              <input type='Password' placeholder="Password"></input>
               <input placeholder="Nhập lại Password "></input>
-              <input placeholder="Nhập Email"></input>
+              <input type='Email' placeholder="Nhập Email"></input>
             </div>
 
             <div className="from-btn">
@@ -34,8 +39,18 @@ const FromDk = (props) => {
             </div>
             <div className="lien-ket">
               <button className="fb">
-              <i class="fa fa-facebook-official" aria-hidden="true">  Liên Kết Với Facebook</i>  </button>
-              <button className="gg"> <i class="fa fa-google" aria-hidden="true"> Liên Kết Với Google</i>  </button>
+                <i class="fa fa-facebook-official" aria-hidden="true">
+                  {" "}
+                  Liên Kết Với Facebook
+                </i>{" "}
+              </button>
+              <button className="gg">
+                {" "}
+                <i class="fa fa-google" aria-hidden="true">
+                  {" "}
+                  Liên Kết Với Google
+                </i>{" "}
+              </button>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import user from '../img/user2.jpg'
 import Modal from "react-bootstrap/Modal";
 import "./From-dn.scss";
-const FromDk = (props) => {
+const FromDn = (props) => {
   return (
     <Modal
       {...props}
@@ -41,4 +41,4 @@ const FromDk = (props) => {
     </Modal>
   );
 };
-export default FromDk;
+export default FromDn;
