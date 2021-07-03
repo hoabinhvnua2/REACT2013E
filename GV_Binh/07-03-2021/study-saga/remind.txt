@@ -1,0 +1,16 @@
+Các API cơ bản cần sử dụng:
++ createSagaMiddleware: dùng để tạo ra saga
++ middleware.run: dùng để chạy saga
++ takeLatest: Thực hiện 1 action cuối cùng và trả về kết quả cho action đó
++ put: thực hiện dispatch 1 một action
++ call: dùng để call 1 function (call hàm API)
++ fork: thiện hiện call function non-blocking
++ all: thực hiện tất cả các effect
+
+
+Các lib:
++ Redux
++ React-Redux
++ Redux-dev-tool
++ Redux-saga
++ axios
