@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
-import { addNewUser } from "../../redux/constants/User";
+import { addNewUser, deleteUser, updateUser } from "../../redux/constants/User";
 import Modal from "react-bootstrap/Modal";
 import InputGroup from "react-bootstrap/InputGroup";
 
@@ -14,7 +14,10 @@ const User = () => {
   const dispatch = useDispatch();
   const [smShow, setSmShow] = useState(false);
   const [editUser, setEditUser] = useState(false);
-  const textInput = useRef("HTML");
+  const [numberRow, setNumberRow] = useState(null);
+  const [valueInput, setValueInput] = useState("");
+  const[isEdit, setIsEdit] = useState(true);
+
   let inputAdd;
 
   const handleAdd = (e) => {
@@ -23,6 +26,7 @@ const User = () => {
     if (!inputAdd) return false;
 
     if (!data.some((v) => v.user === value)) {
+      localStorage.setItem('users', JSON.stringify([...data, { user: value } ]))
       dispatch(addNewUser(value));
       inputAdd.value = "";
     } else {
@@ -34,11 +38,34 @@ const User = () => {
     return false;
   };
 
-  const handleEditing = (u) => {
-    console.log("r", textInput);
-    setEditUser(true);
+  const handleEditing = (v, i) => {
+    if (isEdit) {
+      setEditUser(true);
+      setNumberRow(i);
+      setValueInput(v.user);
+    } else {
+      data[i].user = valueInput
+      localStorage.setItem('users', JSON.stringify(data))
+      dispatch(updateUser(data))
+      setEditUser(false);
+    }
+
+
+    // @TODO action update
+
   };
 
+  const handleChangeValue = (e) => {
+    setValueInput(e.target.value);
+  };
+
+  const handleDelete = (v) => {
+    const arrayUser = data.filter(d => d.user !== v.user)
+    localStorage.setItem('users', JSON.stringify(arrayUser))
+    dispatch(deleteUser(arrayUser))
+  }
+
+  console.log('data', data)
   return (
     <div>
       <Form onSubmit={handleAdd}>
@@ -69,12 +96,13 @@ const User = () => {
               <tr key={index.toString()}>
                 <td>{index + 1}</td>
                 <td>
-                  {editUser ? (
+                  {editUser && numberRow === index ? (
                     <InputGroup size="sm" className="mb-3">
                       <Form.Control
                         aria-label="Small"
                         aria-describedby="inputGroup-sizing-sm"
-                        ref={textInput}
+                        value={valueInput}
+                        onInput={handleChangeValue}
                       />
                     </InputGroup>
                   ) : (
@@ -82,10 +110,17 @@ const User = () => {
                   )}
                 </td>
                 <td>
-                  <Button variant="primary" onClick={() => handleEditing(val)}>
-                    Edit
-                  </Button>
-                  <Button className="ml-2" variant="danger">
+                    <Button
+                      variant="primary"
+                      onClick={() => {
+                        setIsEdit(!isEdit);
+                        handleEditing(val, index)
+                      }
+                    }
+                    >
+                       {isEdit ? 'Edit' : 'Save'}
+                    </Button>
+                  <Button className="ml-2" variant="danger" onClick={() => handleDelete(val)}>
                     DEL
                   </Button>
                 </td>
