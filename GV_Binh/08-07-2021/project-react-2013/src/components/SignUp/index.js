@@ -10,11 +10,54 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/styles";
-import style from "../SignIn/style";
+import { makeStyles } from "@material-ui/core/styles";
+import * as yup from 'yup'
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
-const SignUp = ({ classes }) => {
+
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
+
+const schemaSignUp = yup.object().shape({
+  firstName: yup.string().required('This is required!'),
+  lastName: yup.string().required('This is required!'),
+  userName: yup.string().required('This is required!'),
+  password: yup.string().required('This is required!').matches(
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+    "Password not strong!"
+  ),
+})
+
+const SignUp = () => {
+  const classes = useStyles();
+
+  const { handleSubmit, register, formState: { errors } } = useForm({
+    resolver: yupResolver(schemaSignUp)
+  })
+
+
+  const submit = (data) => {
+
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -25,7 +68,7 @@ const SignUp = ({ classes }) => {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit(submit)}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -37,6 +80,9 @@ const SignUp = ({ classes }) => {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                {...register('firstName')}
+                error={!!errors?.firstName}
+                helperText={errors?.firstName?.message}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -48,6 +94,9 @@ const SignUp = ({ classes }) => {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                {...register('lastName')}
+                error={!!errors?.lastName}
+                helperText={errors?.lastName?.message}
               />
             </Grid>
             <Grid item xs={12}>
@@ -56,9 +105,11 @@ const SignUp = ({ classes }) => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                label="User name"
+                name="userName"
+                {...register('userName')}
+                error={!!errors?.userName}
+                helperText={errors?.userName?.message}
               />
             </Grid>
             <Grid item xs={12}>
@@ -70,7 +121,9 @@ const SignUp = ({ classes }) => {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                {...register('password')}
+                error={!!errors?.password}
+                helperText={errors?.password?.message}
               />
             </Grid>
             <Grid item xs={12}>
@@ -91,7 +144,7 @@ const SignUp = ({ classes }) => {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/sign-in" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>
@@ -102,8 +155,4 @@ const SignUp = ({ classes }) => {
   );
 };
 
-SignUp.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(style)(SignUp);
+export default SignUp;

@@ -12,6 +12,9 @@ import React, { useState } from 'react';
 import LayoutTheme from './layout';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import PrivateRoute  from './common/PrivateRoute';
+import { Route, Router, Switch } from 'react-router-dom';
+import { history } from './helper/history';
 
 
 // const style = (theme) => ({
@@ -39,25 +42,16 @@ function App() {
 
   return (
     <div>
-   {/* <Button variant="contained" color="primary" onClick={() =>  setOpen(true)}>
-      Hello World
-    </Button>
-
-    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} maxWidth='md' fullWidth="true">
-    <MuiDialogTitle disableTypography className={classes.root}>
-      <Typography variant="h6" className={classes.customColor}>Form Đăng ký</Typography>
-        <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
-          <CloseIcon />
-        </IconButton>
-    </MuiDialogTitle>
-      <DialogContent>
-        Xin chao cac b lop React 2013
-      </DialogContent>
-    </Dialog> */}
-    {/* <LayoutTheme /> */}
+      <Router history={history}>
+        <Switch>
+          <PrivateRoute exact path="/admin" component={LayoutTheme} />
+          <Route path="/sign-in" component={SignIn} />
+          <Route path="/sign-up" component={SignUp} />
+        </Switch>
+      </Router>
 
     {/* <SignIn /> */}
-    <SignUp />
+    {/* <SignUp /> */}
     </div>
   );
 }

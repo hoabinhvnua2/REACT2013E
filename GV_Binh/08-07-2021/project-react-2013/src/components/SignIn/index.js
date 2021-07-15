@@ -11,10 +11,46 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import style from './style';
+import { makeStyles } from '@material-ui/core/styles';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
-const SignIn = ({ classes }) => {
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
+
+const schemaSignIn = yup.object().shape({
+  userName: yup.string().required('This is required!'),
+  password: yup.string().required('This is required!')
+})
+
+const SignIn = () => {
+  const classes = useStyles();
+  const { handleSubmit, register, formState: { errors } } = useForm({
+    resolver: yupResolver(schemaSignIn)
+  })
+
+  console.log('errors', errors)
+  const submit = (data) => {
+    console.log(data)
+  }
     return (
         <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -25,17 +61,20 @@ const SignIn = ({ classes }) => {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit(submit)}>
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Email Address"
-            name="email"
+            label="User name"
+            name="userName"
+            {...register('userName')}
             autoComplete="email"
             autoFocus
+            error={!!errors?.userName}
+            helperText={errors?.userName?.message}
           />
           <TextField
             variant="outlined"
@@ -46,7 +85,10 @@ const SignIn = ({ classes }) => {
             label="Password"
             type="password"
             id="password"
+            {...register('password')}
             autoComplete="current-password"
+            error={!!errors?.password}
+            helperText={errors?.password?.message}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -68,7 +110,7 @@ const SignIn = ({ classes }) => {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/sign-up" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
@@ -79,8 +121,4 @@ const SignIn = ({ classes }) => {
     );
 };
 
-SignIn.propTypes = {
-    classes: PropTypes.object.isRequired,
-}
-
-export default withStyles(style)(SignIn);
+export default SignIn;
