@@ -1,67 +1,36 @@
-import React,{useState} from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import React from "react";
+import PropTypes from "prop-types";
 
-const Fromtest = () => {
-    const [email,setEmail] = useState();
-    const [password,setPassword] = useState();
-    const [hand,setHand] = useState([]);
+Fromtest.propTypes = {
+  todos: PropTypes.array,
+  ontodoClick: PropTypes.func,
+};
 
-    const handemail =(e)=>{
-     
-       
-        const { value } = e.target;
-        setEmail(value);
-     
+Fromtest.defaultProps = {
+  todos: [],
+  onTodoClick: null,
+};
+
+function handleClicj(todo) {}
+
+function Fromtest(props) {
+  const { todos, onTodoClick } = props;
+
+  function handleClick(todo) {
+    if (onTodoClick) {
+      onTodoClick(todo);
     }
-    const handpassword =(e)=>{
-        const {value} = e.target;
-        setPassword(value);
-        
-    }
-    const hando =(e)=>{
-      const { value } = e.target;
-     
-     setHand(value)
-       
-       
-        
-    }
-
-
-  const checkFrom = (e) => {
-      e.preventDefault()
-     
-      const hienThi = {
-          email,
-          password
-      };
-      console.log(hand[0])
-  
-  };
+  }
 
   return (
-    <div>
-      <Form onSubmit={checkFrom}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" onInput ={hando} />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password"  onInput = {hando}/>
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </div>
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id} onClick={() => handleClick(todo)}>
+          {todo.title}
+        </li>
+      ))}
+    </ul>
   );
-};
+}
 
 export default Fromtest;
