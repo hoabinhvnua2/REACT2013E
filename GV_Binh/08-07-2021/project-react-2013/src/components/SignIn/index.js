@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,6 +15,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useUser } from '../../redux/hooks/User';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -46,10 +48,27 @@ const SignIn = () => {
   const { handleSubmit, register, formState: { errors } } = useForm({
     resolver: yupResolver(schemaSignIn)
   })
+  const [infoUser, setInfoUser] = useState({
+    userName: '',
+    password: ''
+  })
+  const { user, action } = useUser()
+  const history = useHistory()
 
-  console.log('errors', errors)
+  console.log('list user', user.userList)
+  console.log('infoUser', infoUser)
+
+  useEffect(() => {
+    if (user.userList.some(u => u.userName === infoUser.userName && u.password === infoUser.password)) {
+      console.log('vao roi');
+      localStorage.setItem('users', JSON.stringify(infoUser))
+      history.push('/admin')
+    }
+  }, [user.userList, infoUser, history])
+
   const submit = (data) => {
-    console.log(data)
+    setInfoUser(() => data)
+    action.getUsers()
   }
     return (
         <Container component="main" maxWidth="xs">

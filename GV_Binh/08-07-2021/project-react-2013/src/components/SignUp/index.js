@@ -11,55 +11,84 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import * as yup from 'yup'
+import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-
+import { useUser } from "../../redux/hooks/User";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(3),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  customContainer: {
+    position: "relative",
+  },
+  customSpin: {
+    position: "absolute",
+    zIndex: 2,
+    width: "100%",
+    height: "100%",
+    top: 0,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingLeft: "5px",
+    paddingRight: "50px",
+  },
 }));
 
 const schemaSignUp = yup.object().shape({
-  firstName: yup.string().required('This is required!'),
-  lastName: yup.string().required('This is required!'),
-  userName: yup.string().required('This is required!'),
-  password: yup.string().required('This is required!').matches(
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-    "Password not strong!"
-  ),
-})
+  firstName: yup.string().required("This is required!"),
+  lastName: yup.string().required("This is required!"),
+  userName: yup.string().required("This is required!"),
+  password: yup
+    .string()
+    .required("This is required!")
+    .matches(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+      "Password not strong!"
+    ),
+});
 
 const SignUp = () => {
   const classes = useStyles();
+  const { user, action } = useUser();
 
-  const { handleSubmit, register, formState: { errors } } = useForm({
-    resolver: yupResolver(schemaSignUp)
-  })
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schemaSignUp),
+  });
 
+  console.log('user', user)
 
   const submit = (data) => {
-
-  }
+    console.log("data", data);
+    action.registerUser(data);
+  };
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      maxWidth="xs"
+      className={classes.customContainer}
+    >
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -68,7 +97,11 @@ const SignUp = () => {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate onSubmit={handleSubmit(submit)}>
+        <form
+          className={classes.form}
+          noValidate
+          onSubmit={handleSubmit(submit)}
+        >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -80,7 +113,7 @@ const SignUp = () => {
                 id="firstName"
                 label="First Name"
                 autoFocus
-                {...register('firstName')}
+                {...register("firstName")}
                 error={!!errors?.firstName}
                 helperText={errors?.firstName?.message}
               />
@@ -94,7 +127,7 @@ const SignUp = () => {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
-                {...register('lastName')}
+                {...register("lastName")}
                 error={!!errors?.lastName}
                 helperText={errors?.lastName?.message}
               />
@@ -107,7 +140,7 @@ const SignUp = () => {
                 id="email"
                 label="User name"
                 name="userName"
-                {...register('userName')}
+                {...register("userName")}
                 error={!!errors?.userName}
                 helperText={errors?.userName?.message}
               />
@@ -121,7 +154,7 @@ const SignUp = () => {
                 label="Password"
                 type="password"
                 id="password"
-                {...register('password')}
+                {...register("password")}
                 error={!!errors?.password}
                 helperText={errors?.password?.message}
               />
@@ -151,6 +184,13 @@ const SignUp = () => {
           </Grid>
         </form>
       </div>
+
+      {
+        user.loading && 
+        (<div className={classes.customSpin}>
+          <CircularProgress color="secondary" />
+        </div>)
+      }
     </Container>
   );
 };
