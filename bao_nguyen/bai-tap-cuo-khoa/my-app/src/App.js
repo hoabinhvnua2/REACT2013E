@@ -1,13 +1,10 @@
-import logo from './logo.svg';
-import './App.scss';
-import { BrowserRouter , Route ,Link ,Switch ,Redirect  } from 'react-router-dom';
-
+import "./App.scss";
+import Count from "./components/counter";
+import Produc from "./components/Product/Produc";
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
-         
-        </BrowserRouter>
+      <Produc></Produc>
     </div>
   );
 }
