@@ -21,6 +21,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Product from "../pages/Product";
 import User from "../pages/User";
 import MenuAvata from '../common/MenuAvata';
+import ProductDetail from "../pages/Product/ProductDetail";
 
 const LayoutTheme = ({ classes }) => {
   const [open, setOpen] = useState(true);
@@ -76,7 +77,7 @@ const LayoutTheme = ({ classes }) => {
         </div> */}
           <Divider />
           <List>
-            <Link to="/product">
+            <Link to="/admin/product">
               <ListItem button>
                 <ListItemIcon>
                   <MailIcon />
@@ -84,7 +85,7 @@ const LayoutTheme = ({ classes }) => {
                 <ListItemText primary="Product" />
               </ListItem>
             </Link>
-            <Link to="/user">
+            <Link to="/admin/user">
               <ListItem button>
                 <ListItemIcon>
                   <MailIcon />
@@ -102,8 +103,9 @@ const LayoutTheme = ({ classes }) => {
         >
           <div className={classes.drawerHeader} />
           <Switch>
-            <Route exact path="/product" component={Product} />
-            <Route exact path="/user" component={User} />
+            <Route exact path="/admin/product" component={Product} />
+            <Route exact path="/admin/product/:id" component={ProductDetail} />
+            <Route exact path="/admin/user" component={User} />
           </Switch>
         </main>
       </Router>

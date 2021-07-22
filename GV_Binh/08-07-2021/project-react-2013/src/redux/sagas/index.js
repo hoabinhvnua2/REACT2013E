@@ -1,8 +1,10 @@
 import { fork } from 'redux-saga/effects';
 import userSaga from './User';
+import product from './Product'
 
 export default function* rootSaga() {
     yield fork(userSaga)
+    yield fork(product)
 }
 
 // 1. Hook nó dispatch 1 action - trọc vào root saga
