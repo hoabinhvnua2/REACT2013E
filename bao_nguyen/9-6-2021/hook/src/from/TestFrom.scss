@@ -1,0 +1,75 @@
+.conten{
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 200px;
+    border: 1px solid #111;
+ 
+    .firstName{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10px;
+        p{
+            margin: 7px;
+            font-weight: 600;
+        }
+     }   
+     
+    .lastName{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10px;
+        
+        p{
+            margin: 7px;
+            font-weight: 600;
+        }
+     }   
+
+     
+    .password{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10px;
+        p{
+            margin: 7px;
+            font-weight: 600;
+        }
+     }   
+
+     
+    .email{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px -3px;
+        p{
+            margin: 7px;
+            font-weight: 600;
+        }
+     }   
+     .btn{
+         margin-bottom: 20px;
+         button{
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+        button:hover{
+            background-color: #4CAF50;
+            color: white;
+        }
+     
+       
+ 
+     }
+   
+   
+
+
+
+
+
+
+
+
+}
