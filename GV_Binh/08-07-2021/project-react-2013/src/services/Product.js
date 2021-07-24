@@ -1,10 +1,11 @@
 
 import axios from "axios";
+import httpClient from "../helper/interceptor";
 
 const URL = 'https://5fd96f0e7e05f000170d385e.mockapi.io/api/v1/';
 
 const getProduct = () => (
-    axios.get(`${URL}products`).then(x => x.data)
+    httpClient.get(`${URL}products`).then(x => x.data)
 )
 
 const addProduct = (params) => (
