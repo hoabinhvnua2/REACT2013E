@@ -1,0 +1,39 @@
+1-HTML: 
+    + thẻ thường và thẻ semantic
+    + flex và grid
+2-CSS: 
+    + Box model là gì?
+    + box-sizing và ý nghĩa của các giá trị
+    + độ ưu tiên của các selector
+    + các đơn vị trong CSS
+3-Javascript: 
+    + Let, var, const có gì khác nhau và khi nào thì sử dụng chúng?
+    + block scope và function scope là gì, sự khác nhau giữa chúng
+    + clouse là gì? ví dụ 1 trường sử dụng clouse
+    + các toán tử trong Javascript
+    + các điều kiện rẽ nhành
+    + các loại vòng lặp
+    + event loop và các bước event thực hiện
+    + Object, Array và các phương thức xử lý
+    + call back, promise, async await
+    + DOM, event, form (BOM)
+    + đọc thêm es6
+
+4-React:
+    + React create project
+    + class component, function component
+    + state, props
+    + lifecycle React
+    + list và key
+    + context API
+    + fragment
+    + refs
+    + hook API
+    + redux
+    + react-redux
+    + redux-saga
+    + react-router-DOM
+    + react-hook-form || fomik && Yup
+    + immer, reselect, material ...
+
+    
