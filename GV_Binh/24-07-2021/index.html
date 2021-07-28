@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  var có tác dụng vs block scope -->
+
+
+    <script>
+        // var gggg = '';
+        // if(true) {
+        //     var o = 'Hi';''
+        // }
+
+        // function a() {
+        //     var index = 0;
+
+        //     function ab() {
+
+        //         console.log('index', index)
+        //         index += 1
+        //     }
+
+        //     return ab;
+        // }
+
+        // const c = a();
+        // c();  // 0
+        // c();  // 1
+        // c();  // 2
+        // c();  // 3
+        // c();  // 4
+
+        // useMemo(() => {}, [index])
+
+        // function showName(a) {
+
+        //     return function (b) {
+        //         console.log(`Hello ${b}, My name is ${a}`)
+        //     }
+        // }
+
+
+        // const ab = showName('React')
+        // ab('HTMl')
+
+
+        // a là biến global
+        var a =  10;
+
+
+        function withStyle(style) {
+            const classes = makeStyle(style)
+          return (
+              <>
+                <div className={classes.customBorder}>
+                    </div>
+              </>
+          )
+        }
+
+        withStyle(1)(2)
+
+
+        console.log(1)
+        console.log(2)
+        console.log(5)
+        console.log(4)
+        console.log(3)
+
+        setTimeout(() => {
+            console.log(8)
+        }, 0)
+        setTimeout(() => {
+            console.log(0)
+        }, 5000)
+        setTimeout(() => {
+            console.log(3)
+        }, 1000)
+        setTimeout(() => {
+            console.log(5)
+        }, 2000)
+
+    </script>
+
+</body>
+</html>
